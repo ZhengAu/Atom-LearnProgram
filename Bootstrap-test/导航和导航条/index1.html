@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>导航</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <style media="screen">
+    ul li{
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h2>标签页：</h2>
+  <ul class="nav nav-pills nav-justified">  <!--nav-tabs-->
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">About</a></li>
+    <li role="presentation" class="disabled"><a href="#">List</a></li>
+  </ul>
+
+  <h2>添加下拉菜单的标签页：</h2>
+  <ul class="nav nav-tabs">
+    <li role="presentation"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">House</a></li>
+    <li role="presentation" class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+        Dropdown<span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#">dwopdown1</a></li>
+        <li><a href="#">dwopdown2</a></li>
+        <li><a href="#">dwopdown3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Help</a></li>
+  </ul>
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

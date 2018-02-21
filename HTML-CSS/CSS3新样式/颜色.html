@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rgba,has和hsla,a代表透明度</title>
+    <style media="screen">
+      div{
+        width: 650px;
+        border: 1px solid rgb(37, 181, 80);
+      }
+      .div1{
+        height: 300px;
+        background: url('sky.jpg') top left no-repeat;
+      }
+      .div1-child{
+        height: 200px;
+        background-color: rgba(0, 0,255,0.4);
+      }
+      .div2{
+        height: 300px;
+        background: url('sky.jpg') top left no-repeat;
+      }
+      .div2-child{
+        height: 200px;
+        background-color: hsl(240, 80%, 45%);
+        background-color: hsla(240,80%,55%,0.4);
+        /*色相0-360，保护度0-100%，亮度0-100%，透明度0-1*/
+      }
+      .maindiv1,.maindiv2{
+        float: left;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="maindiv1">
+      <h1>rgba和rgb:</h1>
+      <div class="div1">
+        <div class="div1-child">
+
+        </div>
+      </div>
+    </div><!-- end of rgba -->
+    <div class="maindiv2">
+      <h1>hsla和hsl</h1>
+      <div class="div2">
+        <div class="div2-child"></div>
+      </div>
+    </div><!-- end of hsla -->
+  </body>
+</html>

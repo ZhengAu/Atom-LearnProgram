@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="..\css\bootstrap.min.css">
+    <title>药品添加</title>
+    <style media="screen">
+        body{
+            background-color: rgba(54, 85, 79,0.4);
+        }
+        .editPage{
+            background-color: #F5FAFE;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            box-shadow: 3px 3px 2px #ccc;
+        }
+        .editTop h3{
+            background-color: #AFD1F3;
+        }
+        .row{
+            margin-top: 8px;
+            padding-bottom: 5px;
+        }
+        #mname,#shop_price{
+            border:0;
+            border-bottom:1px solid #ccc;
+            outline: none;/*取消边框*/
+            text-indent: 5px;
+        }
+        .btn_submit,.btn_reset,.btn_cancel{
+            width: 80px;
+        }
+        #quantity,#shelf_life{
+            width:50px;
+            /*margin-right: 5px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="editPage container">
+        <div class="editTop text-center">
+            <h3>添加药品</h3>
+        </div>
+        <br>
+        <div class="editForm">
+            <form action="" method="post" class="">
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        药品名称:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" name="mname" id="mname" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        商场价格:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" name="shop_price" id="shop_price" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        库存量:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="number" name="quantity" id="quantity" value="">&nbsp;&nbsp;<strong>份</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="">
+                        服用方法:
+                    </div>
+                    <div class="col-sm-5">
+                        <select class="mmode" name="mmode">
+                            <option value="0">内服</option>
+                            <option value="1">外用</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="">
+                        功效:
+                    </div>
+                    <div class="col-sm-5">
+                        <textarea name="mefficacy" rows="5" cols="40"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        生产日期:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="date" name="product_date" id="product_date" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        进货日期:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="date" name="purchase_date" id="purchase_date" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        保质期:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="number" name="shelf_life" id="shelf_life" value="">&nbsp;&nbsp;<strong>月</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="">
+                        药品类别:
+                    </div>
+                    <div class="col-sm-5">
+                        <select id="cid" name="cid" style="width:82px;">
+                            <option value="">不限</option>
+                            <option value="">家庭常备</option>
+                            <option value="">专科用药</option>
+                            <option value="">医疗器械</option>
+                            <option value="">计生用品</option>
+                            <option value="">滋补保健</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="">
+                        生产厂家:
+                    </div>
+                    <div class="col-sm-5">
+                        <select id="sid" name="sid" style="width:82px;">
+                            <option value="">不限</option>
+                            <option value="">江西远东药业有限公司</option>
+                            <option value="">九江医药总公司</option>
+                            <option value="">爱索尔广州包装有限公司</option>
+                            <option value="">北京同仁堂有限责任公司</option>
+                            <option value="">山东加华制药有限公司</option>
+                        </select>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-sm-offset-3 col-sm-2">
+                        <button type="submit" class="btn_submit  btn btn-primary" onclick="javascript:;" name="确定">确定</button>
+                    </div>
+                        <div class="col-sm-2">
+                        <button type="reset" class="btn_reset  btn btn-primary" name="重置">重置</button>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn_cancel  btn btn-primary" name="返回" onclick="history.go(-1)">返回</button>
+                    </div>
+                </div>
+            </form>
+        </div><!-- end of .editForm -->
+    </div><!-- end of .editPage -->
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新增表单元素</title>
+    <style media="screen">
+      label{
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+        margin-top:  10px;
+      }
+      .output{
+        margin-left: 150px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="">输入浏览器名称：</label>
+    <input type="text" list="choiceList">
+    <datalist id="choiceList">
+      <option value="Chrome">google</option>
+      <option value="Firefox">火狐</option>
+      <option value="IE">Microsoft</option>
+      <option value="Opera">欧朋</option>
+      <option value="Safari">苹果</option>
+    </datalist>
+    <form class="" action="index.html" method="get">
+      <label for="">用户名：</label>
+      <input type="text" name="user" value=""><br>
+      <label for="">加密：</label>
+      <keygen name="security">
+      <input type="submit" value="确定">
+    </form>
+    <form oninput="x.value=a.value" class="output">
+      <input type="range" name="a" value="0">
+      <output name="x">0</output>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover和简单动画</title>
+    <style media="screen">
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #div1{
+            background: blue;
+        }
+        #div2{
+            background: red;
+        }
+    </style>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#div1').hover(function () {
+                // $('#div2').hide(3000);
+
+                // $('#div2').slideUp();
+
+                // $('#div2').fadeOut(3000);
+
+                $('#div2').fadeTo(1000,0.3);
+
+            },function () {
+                // $('#div2').show(3000);
+
+                // $('#div2').slideDown();
+
+                // $('#div2').fadeIn(3000);
+
+                $('#div2').fadeTo(1000,1);
+
+            })
+        });
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>

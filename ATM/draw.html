@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATM取款窗口</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <h2>现金提取窗口</h2>
+            </div>
+            <div class="main">
+                <div class="main-left">
+                    <button type="button" name="button" class="btn btn-primary">500</button>
+                    <button type="button" name="button" class="btn btn-primary">1000</button>
+                    <button type="button" name="button" class="btn btn-primary">1500</button>
+                    <button type="button" name="button" class="btn btn-primary" onclick="history.go(-1)">返回</button>
+                </div>
+                <div class="main-body">
+                    <div class="content">
+                        <br><br>
+                        <h5 class="text-center">请选择金额！</h5>
+                        <br><br>
+                        <form>
+                          <div class="form-group row">
+                            <label for="inputOtherMoney" class="offset-1 col-sm-3 col-form-label">其他金额：</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="inputOtherMoney" placeholder="">
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="main-right">
+                    <button type="button" name="button" class="btn btn-primary">100</button>
+                    <button type="button" name="button" class="btn btn-primary">200</button>
+                    <button type="button" name="button" class="btn btn-primary">300</button>
+                    <button type="button" name="button" class="btn btn-primary">确定</button>
+                </div>
+                <div class="clearfix"></div><!-- 清除浮动 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

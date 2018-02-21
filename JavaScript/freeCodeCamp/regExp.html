@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function palindrome(str) {
+            // 请把你的代码写在这里
+            var newStr = str.replace(/\s/g, '').replace(/\W/g, '').replace(/\_/g, '');
+            //依次去掉空白字符，标点符号，下划线
+            str = newStr.toLowerCase();
+            for (var i = 0, j = str.length - 1; i < j; i++, j--) {
+
+                if (str.charAt(i) !== str.charAt(j)) {
+                    return false;
+                }
+            }
+            return true;
+            //return str;
+        }
+        palindrome("0_0 (: /-\ :) 0-0");
+    </script>
+</body>
+
+</html>

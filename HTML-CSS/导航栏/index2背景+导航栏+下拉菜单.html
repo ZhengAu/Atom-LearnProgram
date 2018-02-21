@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>背景+导航栏+下拉菜单</title>
+    <link rel="shortcut icon" href="fa.ico" type="image/x-icon">
+    <style media="screen">
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      /*背景层*/
+      .bg-main,img{
+        position: absolute;
+      }
+      .bg-main,img{
+        width: 100%;
+        height: 100%;
+      }
+      /*头部*/
+      .header{
+        height: 150px;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(80,80,80,0.4);
+      }
+      /*头部的导航栏*/
+      .header_nav{
+        /*position: relative;
+        top: 103px;
+        float:right*/
+        float: right;
+        margin-top: 103px;
+      }
+      ul{
+        list-style-type: none;
+      }
+      li{
+        float: left;
+      }
+      a:link,a:visited{
+        display: block;
+        background-color: #98bf21;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        width: 150px;
+        line-height: 38px;
+        font-size: 20px;
+        padding: 4px;
+        border-radius: 7px;  /*圆角*/
+      }
+      a:hover,a:active{
+        background-color: #7A991A;
+      }
+      /*下拉菜单*/
+      .dropdown-content a{
+        background-color:rgba(51,51,51,0.8);
+      }
+      .dropdown-content a:hover{
+        background-color: #7A791A;
+      }
+      .dropdown-content a{
+        border-radius: 0px;/*去掉下拉菜单中的圆角*/
+      }
+      .dropdown-content{
+        display: none;
+        box-shadow: 2px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+      .dropdown:hover .dropdown-content{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 背景层 -->
+    <div class="bg">
+      <div class="bg-main">
+        <img src="img/slide2.jpg" alt="背景图片">
+      </div>
+    </div>
+    <!-- 头部 -->
+    <div class="header">
+      <!-- 头部的导航栏 -->
+      <div class="header_nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li>
+            <div class="dropdown">
+              <a href="#service">Service</a>
+              <div class="dropdown-content">
+                <a href="#service1">Html5</a>
+                <a href="#service2">CSS3</a>
+                <a href="#service3">Boostrap</a>
+                <a href="#service4">JavaScript</a>
+                <a href="#service5">JQuery</a>
+                <a href="#service6">MySQL</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#aboutme">Abount me</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#Legal">Legal</a></li>
+          <!-- 导航栏中More的下拉菜单 -->
+          <li>
+            <div class="dropdown">
+              <a class="dropbutton" href="#more">More</a>
+              <div class="dropdown-content">
+                <a href="#more1">Work</a>
+                <a href="#more2">Hard</a>
+                <a href="#more3">Excellent</a>
+                <a href="#more4">Remarkable</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢迎来到医药商场</title>
+    <!-- bootstrap4 -->
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="index.css">
+    <!-- inco -->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- modal 模态框 -->
+    <script type="text/javascript" src="bootstrap4/js/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap4/js/bootstrap.min.js"></script>
+    <!-- 校验规则 -->
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/messages_zh.js"></script>
+
+    <!-- 鼠标滑过，显示修改密码、编辑资料的DIV -->
+    <script>
+        $(function() {
+            var timer = null;
+            $(".dropdown-Info").on("mouseover", function() {
+                $(".dropdown-menu").show();
+            }).on("mouseout", function() {
+                timer = setTimeout(function() {
+                    $(".dropdown-menu").hide();
+                }, 100);
+            });
+
+            $(".dropdown-menu").on("mouseover", function() {
+                clearTimeout(timer);
+                $(".dropdown-menu").show();
+            }).on("mouseout", function() {
+                $(".dropdown-menu").hide();
+            });
+        });
+    </script>
+    <!-- 校验规则 -->
+    <script type="text/javascript">
+            function validateForm(){
+                return $("#passwordForm").validate({
+                    rules:{
+                        oldPassword:{
+                            required:true
+                        },
+                        newPassword:{
+                            required:true,
+                            rangelength:[6,18]
+                        },
+                        confirmPassword:{
+                            required:true,
+                            equalTo:"#newPassword"
+                        }
+                    },
+                    messages:{
+                        confirmPassword:{
+                            equalTo:"两次密码输入不一致"
+                        }
+                    }
+                }).form();
+            }
+
+            function doSubmit(){
+                if(validateForm()){
+                    // document.passwordForm.submit();
+                    $("#passwordForm").submit();
+                }
+            }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-sm-4 header-left headerUL">
+                        您好，欢迎来到医药商场
+                    </div>
+                    <div class="col-sm-8 headerUL">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item"><a class="" href="login.html">登录</a></li>
+                            <li class="nav-item">
+                                <a href="" class="dropdown-Info" style="height:100px">admin</a>
+                                <div class="dropdown-menu" style="left:43%;margin-top:-1px;">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#updatePersonalInfo">编辑资料</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#updatePassword">修改密码</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="" href="register.html">注册</a></li>
+                            <li class="nav-item"><a class="" href="cart.html">购物车</a></li>
+                            <li class="nav-item"><a class="" href="orders.html">我的订单</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of .header -->
+        <br><br>
+        <div class="main-content">
+            <div class="row searchDiv">
+                <div class="offset-lg-2 col-lg-3 text-center" style="">
+                    <h5 style="color:#666;line-height:38px;">关注健康，购买正品，请到医药商场。</h5>
+                </div>
+                <div class="offset-1 col-lg-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入药品名..." aria-label="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-outline-primary" type="button" style="width:80px;">搜索</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .searchDiv -->
+            <!-- Modal   修改密码 -->
+            <div class="modal fade bd-example-modal-lg" id="updatePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog  modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="updatePassword-Title">修改密码</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+            				</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form action="javascript:;" method="POST" id="passwordForm">
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class="form-group">
+                                                <label for="oldPassword" class="col-form-label">Old password:</label>
+                                                <input type="password" class="form-control" id="oldPassword" name="oldPassword">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class=" form-group">
+                                                <label for="newPassword" class="col-form-label">New password:</label>
+                                                <input type="text" class="form-control" id="newPassword" name="newPassword">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class=" form-group">
+                                                <label for="confirmPassword" class="col-form-label">Confirm password:</label>
+                                                <input type="text" class="form-control" id="confirmPassword" name="confirmPassword">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" onclick="doSubmit()" class="btn btn-primary updatePasswordBtn">Save changes</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- Modal  编辑个人资料 -->
+            <div class="modal fade bd-example-modal-lg" id="updatePersonalInfo" tabindex="-1" role="dialog" aria-labelledby="updateInfo-Title" aria-hidden="true">
+                <div class="modal-dialog  modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="updateInfo-Title">修改个人资料</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form action="javascript:;" method="POST">
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class=" form-group">
+                                                <label for="username" class="col-form-label">Username:</label>
+                                                <input type="text" class="form-control" id="username" name="username" value="admin" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class=" form-group">
+                                                <label for="realname" class="col-form-label">Realname:</label>
+                                                <input type="text" class="form-control" id="realname" name="realname">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class=" form-group">
+                                                <label for="telephone" class="col-form-label">Telephone:</label>
+                                                <input type="tel" class="form-control" id="telephone" name="telephone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class=" form-group">
+                                                <label for="email" class="col-form-label">Email:</label>
+                                                <input type="email" class="form-control" id="email" name="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset-1 col-md-8">
+                                            <div class=" form-group">
+                                                <label for="remark" class="col-form-label">Remark:</label>
+                                                <textarea name="remark" id="remark" rows="3" cols="70"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary updateInfoBtn" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" >Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+
+            <!-- <br> -->
+            <div class="container">
+                <div class="categoryListDiv">
+                    <nav class="nav nav-pills nav-justified">
+                        <a class="nav-item nav-link" href="index.html">首页</a>
+                        <a class="nav-item nav-link" href="javascript:;">家庭常备</a>
+                        <a class="nav-item nav-link" href="javascript:;">专科用药</a>
+                        <a class="nav-item nav-link" href="javascript:;">医疗器械</a>
+                        <a class="nav-item nav-link" href="javascript:;">隐形眼镜</a>
+                        <a class="nav-item nav-link" href="javascript:;">滋补保健</a>
+                        <a class="nav-item nav-link" href="javascript:;">维生素钙</a>
+                        <a class="nav-item nav-link" href="javascript:;">药妆个护</a>
+                        <a class="nav-item nav-link" href="javascript:;">计生用品</a>
+                        <a class="nav-item nav-link" href="javascript:;">母婴用品</a>
+                    </nav>
+                </div>
+                <!-- end of .categoryDiv -->
+                <br><br>
+                <div class="medicineListTable table-responsive">
+                    <table class="table table-hover table-bordered text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th width="5%">序号</th>
+                                <th width="10%">药品名称</th>
+                                <th width="8%">服用方法</th>
+                                <th width="20%">功效疗程</th>
+                                <th width="6%">单价/<i class="fa fa fa-yen"></i></th>
+                                <th width="10%">生产日期</th>
+                                <th width="10%">保质期/月</th>
+                                <th width="10%">加入购物车</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>11asdfasd阿斯蒂芬fasdf111</td>
+                                <td>11111</td>
+                                <td>111asdfasd阿什顿发斯蒂芬阿斯顿发生fasdfasdfasdfasdfasdf11</td>
+                                <td>11111</td>
+                                <td>11111</td>
+                                <td>11111</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>22222</td>
+                                <td>22222</td>
+                                <td>22222</td>
+                                <td>22222</td>
+                                <td>22asdfasdfasdf222</td>
+                                <td>22222</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>33333</td>
+                                <td>33333</td>
+                                <td>33333</td>
+                                <td>33333</td>
+                                <td>33333</td>
+                                <td>33333</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>44444</td>
+                                <td>44444</td>
+                                <td>44444</td>
+                                <td>44444</td>
+                                <td>44444</td>
+                                <td>44444</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>55555</td>
+                                <td>55555</td>
+                                <td>55555</td>
+                                <td>55555</td>
+                                <td>55555</td>
+                                <td>55555</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td>66666</td>
+                                <td><button class="btn btn-sm btn-outline-primary">加入购物车</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end of .medicineListTable -->
+                <br>
+                <div class="paginationDiv">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- end of .paginationDiv -->
+            </div>
+            <!-- end of .container -->
+        </div>
+        <!-- end of .main-content -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="UlDiv">
+                    <ul>
+                        <li><a href="javascript:;">关于我们</a></li>
+                        <li><a href="javascript:;">联系我们</a></li>
+                        <li><a href="javascript:;">正品保障</a></li>
+                        <li><a href="javascript:;">品牌售后</a></li>
+                        <li><a href="javascript:;">法律声明</a></li>
+                        <li><a href="javascript:;">友情链接</a></li>
+                        <li><a href="javascript:;">服务声明</a></li>
+                        <li><a href="javascript:;">广告声明</a></li>
+                    </ul>
+                    <p>
+                        Copyright (c) 2017 Copyright Holder All Rights Reserved. &nbsp;&nbsp;Design by
+                        <a href="https://github.com/ZhengAu" target="_blank">&nbsp;ZhengAu</a>
+                    </p>
+                </div>
+                <!-- end of .UlDiv -->
+            </div>
+        </div>
+        <!-- end of .footer -->
+    </div>
+    <!-- end of .wrapper -->
+</body>
+
+</html>

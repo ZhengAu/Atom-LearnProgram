@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>线性渐变和径向渐变</title>
+    <style media="screen">
+      div{
+        width: 400px;
+        height: 200px;
+        border: 1px solid #25d92c;
+        }
+      .div1{
+        /*线性渐变*/
+        /*background: linear-gradient(to right bottom,blue,green);*/
+        background: linear-gradient(to right bottom,blue,green,blue,yellow);
+        /*background: linear-gradient(90deg,blue,hsla(180, 100%, 50%, 0.8));*/
+      }
+      .div2{
+        border-radius: 50%;
+        /*径向渐变：*/
+        /*ellipse:椭圆形，默认值*/
+        /*background: radial-gradient(ellipse,aqua,blue);*/
+        /*circle:圆形*/
+        /*background: radial-gradient(circle,aqua,green,blue,red,yellow,gray,green);*/
+        background: radial-gradient(200px at left bottom,aqua,blue,green,yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>线性渐变：</h1>
+    <div class="div1"></div>
+    <h1>径向渐变：</h1>
+    <div class="div2"></div>
+  </body>
+</html>

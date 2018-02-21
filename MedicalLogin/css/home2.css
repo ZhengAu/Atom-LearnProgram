@@ -1,0 +1,29 @@
+.container{
+    border: 1px solid red;
+}
+.header{
+    border: 1px solid green;
+    height: 90px;
+}
+.main-body{
+    border: 5px solid #e20c46;
+    clear: both;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.aside{
+    border: 1px solid blue;
+    width: 18%;
+    float: left;
+}
+.main{
+    border: 1px solid grey;
+    width: 82%;
+    float: left;
+}
+.footer{
+    margin-top: 100px;
+    clear: both;
+    border: 1px solid rgb(109, 36, 185);
+    height: 50px;
+}

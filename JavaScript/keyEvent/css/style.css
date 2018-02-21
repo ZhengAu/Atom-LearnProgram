@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 400px;
+    height: 150px;
+    margin: 50px auto;
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+#txt{
+    text-align: center;
+    font-style: italic;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+}
+.btns{
+    margin-top: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.btns #play,#stop{
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 10px;
+}

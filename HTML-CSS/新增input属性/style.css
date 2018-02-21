@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    margin-top: 100px;
+}
+
+div{
+    margin: 10px 0;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}

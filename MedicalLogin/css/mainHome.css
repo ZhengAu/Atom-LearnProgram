@@ -1,0 +1,43 @@
+/*最大的*/
+#wrapper{
+    width: 100%;
+    background-color: #fff;
+    height: 1200px;
+}
+/*头部*/
+.header{
+    position: fixed;
+    /*opacity: 0.4;*/
+    width: 100%;
+    height: 100px;
+    background-color: #06D995;
+    /*border-bottom: 2px solid #0c0;*/
+}
+/*头部下的主体，包括sidebar,page-wrapper,footer*/
+#second-wrapper{
+    width: 100%;
+    padding-top: 102px;
+}
+/*左边固定的导航条*/
+.sidebar{
+    position: fixed;
+    background-color: #283643;
+    /*opacity: 0.4;*/
+    height: 100%;
+    width: 250px;
+}
+/*右边的内容显示，包含footer*/
+#page-wrapper{
+    margin-left: 255px;
+    margin-right: 2px;
+    background-color: #f00;
+}
+/*footer*/
+.footer{
+    text-align: center;
+    background-color: #11f069;
+    /*opacity: 0.5;*/
+    padding: 1.5em 0;
+    border: 8px solid #fff;
+    margin-top: 50px;
+}

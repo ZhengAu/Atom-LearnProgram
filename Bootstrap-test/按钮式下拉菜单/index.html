@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>按钮式下拉菜单</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <h2>单按钮下拉菜单：</h2>
+  <div class="btn-group dropup">
+    <button class="btn btn-lg btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdownmenu1">
+      Button<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownmenu1">
+      <li><a href="#">action1</a></li>
+      <li><a href="#">action2</a></li>
+      <li><a href="#">action3</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">action4</a></li>
+    </ul>
+  </div>
+
+  <h2>分裂式按钮下拉菜单：</h2>
+  <div class="btn-group dropdown">
+    <button type="button" class="btn btn-lg btn-warning">Button</button>
+    <button class="btn btn-lg btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdownmenu1">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownmenu1">
+      <li><a href="#">action1</a></li>
+      <li><a href="#">action2</a></li>
+      <li><a href="#">action3</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">action4</a></li>
+    </ul>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

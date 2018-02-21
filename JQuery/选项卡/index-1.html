@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡</title>
+    <style media="screen">
+        button {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18pt;
+        }
+
+        #center div {
+            /*position: absolute;
+            top: 30px;
+            left: 8px;*/
+            border: 2px solid #4bbd29;
+            width: 250px;
+            height: 250px;
+            margin-top: 10px;
+            text-align: center;
+            font: 20pt arial;
+        }
+
+        .div2,
+        .div3 {
+            display: none;
+        }
+
+        .active {
+            background-color: #888;
+        }
+    </style>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <!-- <script type="text/javascript">
+        window.onload = function(){
+            var oDiv = document.getElementById('center');
+            var aButton = document.getElementsByTagName('button');
+            var aDiv = oDiv.getElementsByTagName('div');
+
+            for(var i=0;i<aButton.length;i++){
+                aButton[i].index = i;
+                aButton[i].onclick = function(){
+                    for (var i = 0; i < aButton.length; i++) {
+                        aButton[i].className = "";
+                        aDiv[i].style.display = "none";
+                    }
+                    this.className = "active";
+                    aDiv[this.index].style.display = "block";
+                }
+
+            }
+        }
+    </script> -->
+    <script type="text/javascript">
+        $(function() {
+            $('#center').find('button').click(function() {
+                // 按钮
+                $('#center').find('button').attr('class', '');
+                $(this).attr('class', 'active');
+                // div框
+                $('#center').find('div').css('display', 'none');
+                $('#center').find('div').eq($(this).index()).css('display', 'block');
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="center">
+        <button type="button" name="button" class="active">1</button>
+        <button type="button" name="button">2</button>
+        <button type="button" name="button">3</button>
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+</body>
+
+</html>

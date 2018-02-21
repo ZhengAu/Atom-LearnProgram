@@ -1,0 +1,78 @@
+<!--
+  canvas的应用，了解基本用法，
+  以后要用到什么时，再去查阅手册即可！
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas元素</title>
+    <style media="screen">
+      #MyCanvas,#MyCanvas2,#MyCanvas3,#MyCanvas4{
+        border: 1px solid #123;
+        background-color: #888;
+      }
+      #MyCanvas3{
+        background-color: #fff;
+      }
+    </style>
+
+  </head>
+  <body>
+    <canvas id="MyCanvas" width="300" height="300"></canvas>
+    <canvas id="MyCanvas2" width="300" height="300"></canvas>
+    <canvas id="MyCanvas3" width="300" height="300"></canvas>
+    <canvas id="MyCanvas4" width="300" height="300"></canvas>
+
+    <script type="text/javascript">
+      var can=document.getElementById('MyCanvas');
+      var txt=can.getContext('2d');
+      txt.fillStyle='#fff'; //填充颜色
+      txt.fillRect(25,25,250,250);  //图形，左上角位置，长度，宽度
+      txt.moveTo(25,25);    //描绘线段的开始位置
+      txt.lineTo(275,275);  //结束位置
+      txt.stroke();         //描线的函数
+
+      var txt2=can.getContext('2d');
+      txt2.fillStyle='#550';
+      txt2.fillRect(50,50,200,200);
+
+      txt2.beginPath();
+      txt2.arc(150,150,80,0,3*Math.PI);
+      txt2.stroke();
+      txt2.fill();
+
+      var can2=document.getElementById('MyCanvas2');
+      var txt3=can2.getContext('2d');
+      txt3.font='30px arial';
+      txt3.fillText('Hello Atom',100,150);
+      txt3.strokeText('Hello ATom',100,200);
+
+      var can4=document.getElementById('MyCanvas3');
+      var txt4=can4.getContext('2d');
+      var grd = txt4.createLinearGradient(10,0,200,0);//渐变开始位置，到结束位置
+      grd.addColorStop(1,'red');
+      grd.addColorStop(0,'green');//0:start;1:stop
+      txt4.fillStyle=grd;
+      txt4.fillRect(10,10,200,100);//图形大小
+
+      var grd2=txt4.createRadialGradient(175,175,5,180,180,100);
+      grd2.addColorStop(0,'red');
+      grd2.addColorStop(1,'yellow');
+      txt4.fillStyle=grd2;
+      txt4.fillRect(100,120,150,150);
+
+      var can5=document.getElementById('MyCanvas4');
+      var txt5=can5.getContext('2d');
+      var img=new Image();
+      img.src="1.jpg";
+      img.onload = function () {
+        txt5.drawImage(img,0,0,100,100);
+      }
+      txt5.rotate(50);//旋转
+      txt5.translate(50,50);//移动
+      txt5.scale(3,2.5);//x、y轴缩放
+
+    </script>
+  </body>
+</html>

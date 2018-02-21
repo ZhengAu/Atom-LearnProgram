@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#bodyLogin {
+	background-color: #474954;
+}
+
+.wrap {
+	padding-top: 80px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 700px;
+	height: 400px;
+	background-color: #fff;
+	box-shadow: -5px 5px 5px #888888;
+	border-radius: 10px;
+}
+
+.container .header {
+	padding: 20px 0 0px;
+}
+
+.header h1 {
+	text-align: center;
+	font-size: 3.5em;
+	font-family: "华文行楷";
+	letter-spacing: 8px;
+}
+
+.error {
+	padding-top: 5px;
+	color: #f00;
+	font-weight: 300;
+}

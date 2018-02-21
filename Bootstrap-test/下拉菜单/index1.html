@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>下拉菜单</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <h2>下拉菜单：</h2>
+  <div class="dropdown">
+    <button type="button" class="btn btn-lg btn-default" id="dropMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      dropdown
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropMenu1">
+      <li class="dropdown-header">Header</li>
+      <li><a href="#">Action1</a></li>
+      <li><a href="#">Action2</a></li>
+      <li class="disabled"><a href="#">Action3</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">Action4</a></li>
+      <li><a href="#">Action5</a></li>
+    </ul>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // extensible标签
+    var obj={x:11,y:2};
+    /*console.log(Object.isExtensible(obj));
+    Object.preventExtensions(obj);
+    console.log(Object.isExtensible(obj));
+    obj.z=1;
+    console.log(obj.z);
+    console.log(Object.getOwnPropertyDescriptor(obj,"x"));*/
+
+    /*Object.seal(obj);
+    console.log(Object.getOwnPropertyDescriptor(obj,"x"));
+    console.log(Object.isSealed(obj));*/
+
+    /*Object.freeze(obj);
+    console.log(Object.getOwnPropertyDescriptor(obj,"y"));
+    console.log(Object.isFrozen(obj));*/
+
+    var obj2={x:1,y:true,z:[1,2,3],nullVal:null};
+    console.log(JSON.stringify(obj2));
+
+    obj2=JSON.parse('{"x":12}');
+    console.log(obj2.x);
+
+
+
+  </script>
+</body>
+</html>

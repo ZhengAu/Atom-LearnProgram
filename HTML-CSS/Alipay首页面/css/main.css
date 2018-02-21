@@ -1,0 +1,77 @@
+/* hidden the overflow-y */
+body{
+  overflow: hidden;
+}
+/*header*/
+.header{
+  position: absolute;
+  /*border: 1px solid red;*/
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+}
+/*the logo */
+.header .logo{
+  height: 25px;
+  width: 70px;
+}
+.header .logo img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 25px;
+  left: 150px;
+}
+/*the login button*/
+.header .entry{
+  position: absolute;
+  top: 30px;
+  right: 200px;
+}
+.header .entry span{
+  color: #ddd;
+}
+.header .entry a{
+  color: #fff;
+  font-size: 1.15em;
+}
+.header .entry a:hover{
+  color: #00ff00;
+}
+/*the container*/
+.container{
+  /*border: 2px solid green;*/
+}
+/*the photo of center*/
+.container .center{
+  position:absolute;
+  top: 160px;
+  left: 400px;
+}
+/*the button group*/
+.button-group{
+  position: absolute;
+  top: 400px;
+  left: 320px;
+}
+.button1{
+  margin-left: 100px;
+}
+.footer{
+  color: #fff;
+  font-size: 16px;
+  font-family:"Times New Roman", Times, serif,arial;
+}
+.footer p:first-child{
+  position: absolute;
+  left: 550px;
+  top: 630px;
+  font-style: italic;
+}
+.footer p:last-child{
+  position: absolute;
+  left: 650px;
+  top: 660px;
+  font-weight: bolder;
+}

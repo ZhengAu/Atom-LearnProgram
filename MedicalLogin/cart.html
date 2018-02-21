@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢迎来到医药商场</title>
+    <!-- bootstrap4 -->
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="index.css">
+    <!-- inco -->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-sm-6 header-left">
+                        您好，欢迎来到医药商场
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item"><a class="" href="login.html">登录</a></li>
+                            <li class="nav-item"><a class="" href="register.html">注册</a></li>
+                            <li class="nav-item"><a class="" href="javascript:;">购物车</a></li>
+                            <li class="nav-item"><a class="" href="orders.html">我的订单</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of .header -->
+        <br><br>
+        <div class="main-content">
+            <div class="row searchDiv">
+                <div class="offset-lg-2 col-lg-3 text-center" style="">
+                    <h5 style="color:#666;line-height:38px;">关注健康，购买正品，请到医药商场。</h5>
+                </div>
+                <div class="offset-1 col-lg-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入药品名..." aria-label="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-outline-primary" type="button" style="width:80px;">搜索</button>
+                        </span>
+                    </div>
+                </div>
+            </div><!-- end of .searchDiv -->
+            <div class="container">
+                <div class="categoryListDiv">
+                    <nav class="nav nav-pills nav-justified">
+                        <a class="nav-item nav-link" href="index.html">首页</a>
+                        <a class="nav-item nav-link" href="javascript:;">家庭常备</a>
+                        <a class="nav-item nav-link" href="javascript:;">专科用药</a>
+                        <a class="nav-item nav-link" href="javascript:;">医疗器械</a>
+                        <a class="nav-item nav-link" href="javascript:;">隐形眼镜</a>
+                        <a class="nav-item nav-link" href="javascript:;">滋补保健</a>
+                        <a class="nav-item nav-link" href="javascript:;">维生素钙</a>
+                        <a class="nav-item nav-link" href="javascript:;">药妆个护</a>
+                        <a class="nav-item nav-link" href="javascript:;">计生用品</a>
+                        <a class="nav-item nav-link" href="javascript:;">母婴用品</a>
+                    </nav>
+                </div><!-- end of .categoryDiv -->
+                <br>
+                <div class="cartDiv">
+                    <div class="cart_empty">
+                        <p>您的购物车还是空的，您可以：</p>
+                        <a href="login.html">立即登录</a>
+                        <h6>或</h6>
+                        <a href="index.html">去主页面逛逛</a>
+                    </div><!-- end of .cart_empty -->
+                    <div class="cartTableDiv">
+                        <h4>购物车详情</h4>
+                        <table class="table table-hover table-bordered table-responsive-md text-center">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th>序号</th>
+                                    <th>药品</th>
+                                    <th>单价</th>
+                                    <th>数量</th>
+                                    <th>小计</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>药品1</td>
+                                    <td>33</td>
+                                    <td>1</td>
+                                    <td>33</td>
+                                    <td><a href="javascript:;">删除</a></td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>药品2</td>
+                                    <td>33</td>
+                                    <td>2</td>
+                                    <td>66</td>
+                                    <td><a href="javascript:;">删除</a></td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>药品3</td>
+                                    <td>33</td>
+                                    <td>3</td>
+                                    <td>99</td>
+                                    <td><a href="javascript:;">删除</a></td>
+                                </tr>
+                                <tr>
+                                    <th>4</th>
+                                    <td>药品4</td>
+                                    <td>33</td>
+                                    <td>4</td>
+                                    <td>132</td>
+                                    <td><a href="javascript:;">删除</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="sumDiv row text-right">
+                            <div class="offset-8 col-sm-4 ">
+                                总价: <strong>￥ 9999.0</strong>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <button type="button" name="submitOrder" class="btn btn-danger">提交订单</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div><!-- end of .cartTableDiv -->
+                </div>
+
+
+            </div><!-- end of .container -->
+        </div><!-- end of .main-content -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="UlDiv">
+                    <ul>
+                        <li><a href="javascript:;">关于我们</a></li>
+                        <li><a href="javascript:;">联系我们</a></li>
+                        <li><a href="javascript:;">正品保障</a></li>
+                        <li><a href="javascript:;">品牌售后</a></li>
+                        <li><a href="javascript:;">法律声明</a></li>
+                        <li><a href="javascript:;">友情链接</a></li>
+                        <li><a href="javascript:;">服务声明</a></li>
+                        <li><a href="javascript:;">广告声明</a></li>
+                    </ul>
+                    <p>
+                        Copyright (c) 2017 Copyright Holder All Rights Reserved. &nbsp;&nbsp;Design by
+                        <a href="https://github.com/ZhengAu" target="_blank">&nbsp;ZhengAu</a>
+                    </p>
+                </div><!-- end of .UlDiv -->
+            </div>
+        </div>
+        <!-- end of .footer -->
+    </div>
+    <!-- end of .wrapper -->
+
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</html>

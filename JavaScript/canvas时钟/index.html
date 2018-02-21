@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas ±÷”</title>
+  <style type="text/css">
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .wrap{
+      margin: 100px auto;
+      width: 50%;
+      text-align: center;
+    }
+    .wrap #date,
+    .wrap #time,
+    .wrap #week{
+      float: left;
+      margin: 0px 15px;
+    }
+    .wrap #date,
+    .wrap #week{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .wrap #time{
+    	float: center;
+    	width: 46%;
+    }
+    .wrap #week{
+    	float: right;
+    }
+    .wrap .con{
+      width: 60%;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 50px;
+      margin-left: 20%;
+    }
+    #canvas{
+      /* border: 1px solid green; */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="con">
+      <span id="date"></span>
+      <h1 id="time"></h1>
+      <span id="week"></span>
+    </div>
+    <canvas id="canvas" width="300" height="300"></canvas>
+  </div>
+  <script type="text/javascript" src="click.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>快速浮动</title>
+    <style media="screen">
+        // Classes
+        .pull-left {
+            float: left !important;
+            border: 2px solid blue;
+        }
+
+        .pull-right {
+            float: right !important;
+            border: 2px solid green;
+        }
+
+        .center-block {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #cd2fba;
+        } // Mixin itself
+        .clearfix() {
+            &:before,
+            &:after {
+                content: " ";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
+        } // Usage as a mixin
+        .element {
+            .clearfix();
+        } // Usage as mixins
+        .element {
+            .pull-left();
+        }
+
+        .another-element {
+            .pull-right();
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pull-left">Left</div>
+    <div class="pull-right">Right</div>
+    <div class="center-block">Center</div>
+    <!-- Usage as a class -->
+    <div class="clearfix">...</div>
+</body>
+
+</html>

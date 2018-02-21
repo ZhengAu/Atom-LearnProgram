@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="..\css\bootstrap.min.css">
+    <title>添加经办人</title>
+    <style media="screen">
+        body{
+            background-color: rgba(54, 85, 79,0.4);
+        }
+        .editPage{
+            background-color: #F5FAFE;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            box-shadow: 3px 3px 2px #ccc;
+        }
+        .editTop h3{
+            background-color: #AFD1F3;
+        }
+        .row{
+            margin-top: 8px;
+            padding-bottom: 5px;
+        }
+        #username,#address,#telephone,#email,#password,#confirmPassword{
+            /*border:0;*/
+            /*border-bottom:1px solid #ccc;*/
+            /*取消边框*/
+            /*outline: none;*/
+            text-indent: 5px;
+        }
+        /* set the buttons' width */
+        .btn_submit,.btn_reset,.btn_cancel{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="editPage container">
+        <div class="editTop text-center">
+            <h3>添加经办人</h3>
+        </div>
+        <br>
+        <div class="editForm">
+            <form action="" method="post" class="">
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        用户名:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" name="username" id="username" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        密码:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="password" name="password" id="password" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        确认密码:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="password" name="password" id="confirmPassword" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="padding-top:3px;">
+                        性别:
+                    </div>
+                    <div class="col-sm-5">
+                        <select id="gender" name="gender" style="width:82px;">
+                            <option value="">不限</option>
+                            <option value="">男</option>
+                            <option value="">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="">
+                        联系方式:
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="tel" name="telephone" id="telephone" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-1 text-right" style="">
+                        备注:
+                    </div>
+                    <div class="col-sm-5">
+                        <textarea name="remark" rows="5" cols="40"></textarea>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-sm-offset-3 col-sm-2">
+                        <button type="submit" class="btn_submit btn btn-primary" onclick="javascript:;" name="button">确定</button>
+                    </div>
+                        <div class="col-sm-2">
+                        <button type="reset" class="btn_reset  btn btn-primary" name="button">重置</button>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn_cancel  btn btn-primary" name="button" onclick="history.go(-1)">返回</button>
+                    </div>
+                </div>
+            </form>
+        </div><!-- end of .editForm -->
+    </div><!-- end of .editPage -->
+</body>
+</html>

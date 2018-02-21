@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <!-- bootstrap4 -->
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="index.css">
+    <!-- inco -->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-sm-6 header-left">
+                        您好，欢迎来到医药商场
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item"><a class="" href="login.html">登录</a></li>
+                            <li class="nav-item"><a class="" href="javascript:;">注册</a></li>
+                            <li class="nav-item"><a class="" href="cart.html">购物车</a></li>
+                            <li class="nav-item"><a class="" href="orders.html">我的订单</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of .header -->
+        <br><br>
+        <div class="main-content">
+            <div class="row searchDiv">
+                <div class="offset-lg-2 col-lg-3 text-center" style="">
+                    <h5 style="color:#666;line-height:38px;">关注健康，购买正品，请到医药商场。</h5>
+                </div>
+                <div class="offset-1 col-lg-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入药品名..." aria-label="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-outline-primary" type="button" style="width:80px;">搜索</button>
+                        </span>
+                    </div>
+                </div>
+            </div><!-- end of .searchDiv -->
+            <div class="container">
+                <div class="categoryListDiv">
+                    <nav class="nav nav-pills nav-justified">
+                        <a class="nav-item nav-link" href="index.html">首页</a>
+                        <a class="nav-item nav-link" href="javascript:;">家庭常备</a>
+                        <a class="nav-item nav-link" href="javascript:;">专科用药</a>
+                        <a class="nav-item nav-link" href="javascript:;">医疗器械</a>
+                        <a class="nav-item nav-link" href="javascript:;">隐形眼镜</a>
+                        <a class="nav-item nav-link" href="javascript:;">滋补保健</a>
+                        <a class="nav-item nav-link" href="javascript:;">维生素钙</a>
+                        <a class="nav-item nav-link" href="javascript:;">药妆个护</a>
+                        <a class="nav-item nav-link" href="javascript:;">计生用品</a>
+                        <a class="nav-item nav-link" href="javascript:;">母婴用品</a>
+                    </nav>
+                </div><!-- end of .categoryDiv -->
+                <div class="registerDiv">
+                    <div class="registerFormDiv">
+                        <form action="javascript:;" id="registerForm" class="registerForm" id="registerForm" method="post">
+                            <br>
+                            <div class="row">
+                                <div class="col-2 offset-sm-3">
+                                    <h4 class="registerH4">欢 迎 注 册</h4>
+                                </div>
+                            </div>
+                            <!-- 用户名 -->
+                            <div class="form-group row">
+                                <label for="username" class="offset-sm-3 col-sm-1 col-form-label">用户名</label>
+                                <div class="col-sm-5">
+                                  <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名...">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="username" id="username-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 密码 -->
+                            <div class="form-group row">
+                                <label for="password" class="offset-sm-3 col-sm-1 col-form-label">密码</label>
+                                <div class="col-sm-5">
+                                  <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码...">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="password" id="password-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 确认密码 -->
+                            <div class="form-group row">
+                                <label for="confirmPassword" class="offset-sm-3 col-sm-1 col-form-label">确认密码</label>
+                                <div class="col-sm-5">
+                                  <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" placeholder="请确认密码...">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="confirmPassword" id="confirmPassword-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 性别 -->
+                            <div class="form-group row">
+                                <label for="gender" class="offset-sm-3 col-sm-1 col-form-label">性别</label>
+                                <div class="col-sm-5">
+                                    <div class=" col-form-label form-check form-check-inline">
+                                        <label class="form-check-label control-label">
+                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="1" checked> 男
+                                        </label>
+                                    </div>
+                                    &nbsp;&nbsp;
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="0"> 女
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="gender" id="gender-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 生日 -->
+                            <div class="form-group row">
+                                <label for="birthday" class="offset-sm-3 col-sm-1 col-form-label">生日</label>
+                                <div class="col-sm-5">
+                                  <input type="date" name="birthday" class="form-control" id="birthday">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="birthday" id="birthday-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 地址 -->
+                            <div class="form-group row">
+                                <label for="address" class="offset-sm-3 col-sm-1 col-form-label">地址</label>
+                                <div class="col-sm-5">
+                                  <input type="text" name="address" class="form-control" id="address" placeholder="请输入地址...">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="address" id="address-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 联系方式 -->
+                            <div class="form-group row">
+                                <label for="telephone" class="offset-sm-3 col-sm-1 col-form-label">联系方式</label>
+                                <div class="col-sm-5">
+                                  <input type="tel" name="telephone" class="form-control" id="telephone" placeholder="请输入联系方式...">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="telephone" id="telephone-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 邮箱 -->
+                            <div class="form-group row">
+                                <label for="email" class="offset-sm-3 col-sm-1 col-form-label">邮箱</label>
+                                <div class="col-sm-5">
+                                  <input type="email" name="email" class="form-control" id="email" placeholder="请输入邮箱...">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="email" id="email-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 症状 -->
+                            <div class="form-group row">
+                                <label for="symptom" class="offset-sm-3 col-sm-1 col-form-label">症状</label>
+                                <div class="col-sm-5">
+                                    <textarea name="symptom" rows="3" cols="60"></textarea>
+                                </div>
+                            </div>
+                            <!-- 备注 -->
+                            <div class="form-group row">
+                                <label for="remark" class="offset-sm-3 col-sm-1 col-form-label">备注</label>
+                                <div class="col-sm-5">
+                                  <textarea name="remark" rows="3" cols="60"></textarea>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="remark" id="remark-error" class="error col-form-label"></label>
+                                </div>
+                            </div>
+                            <!-- 登陆确定按钮 -->
+                            <div class="form-group row">
+                                <div class="offset-sm-4 col-sm-1">
+                                    <button type="submit" class="btn btn-primary btn-md btn-block" name="register">注册</button>
+                                </div>
+                                <div class="offset-1 col-sm-1">
+                                    <button type="reset" class="btn btn-primary btn-md btn-block" name="reset">重置</button>
+                                </div>
+                                <div class="offset-1 col-sm-1">
+                                    <button type="button" class="btn btn-primary btn-md btn-block" name="return" onclick="history.go(-1)">返回</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-9 registerToLogin">
+                                    <a href="login.html">已有账号，点我快速登陆</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- end of .registerFormDiv -->
+                </div><!-- end of .registerDiv -->
+            </div><!-- end of .container -->
+        </div><!-- end of .main-content -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="UlDiv">
+                    <ul>
+                        <li><a href="javascript:;">关于我们</a></li>
+                        <li><a href="javascript:;">联系我们</a></li>
+                        <li><a href="javascript:;">正品保障</a></li>
+                        <li><a href="javascript:;">品牌售后</a></li>
+                        <li><a href="javascript:;">法律声明</a></li>
+                        <li><a href="javascript:;">友情链接</a></li>
+                        <li><a href="javascript:;">服务声明</a></li>
+                        <li><a href="javascript:;">广告声明</a></li>
+                    </ul>
+                    <p>
+                        Copyright (c) 2017 Copyright Holder All Rights Reserved. &nbsp;&nbsp;Design by
+                        <a href="https://github.com/ZhengAu" target="_blank">&nbsp;ZhengAu</a>
+                    </p>
+                </div><!-- end of .UlDiv -->
+            </div>
+        </div>
+        <!-- end of .footer -->
+    </div>
+    <!-- end of .wrapper -->
+
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/messages_zh.js"></script>
+<script type="text/javascript" src="login_register_validate.js"></script>
+</html>

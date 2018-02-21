@@ -1,0 +1,54 @@
+$(function(){
+    /**
+     * 登陆的
+     */
+    $("#loginForm").validate({
+        rules:{
+            username:{
+                required:true
+            },
+            password:{
+                required:true
+            }
+        },
+        messages:{
+            username:{
+                required:"不能为空"
+            },
+            password:{
+                required:"不能为空"
+            }
+        }
+    });
+    /**
+     * 注册的
+     */
+    $("#registerForm").validate({
+        rules:{
+            username:{
+                required:true
+            },
+            password:{
+                required:true
+            },
+            confirmPassword:{
+                required:true
+            },
+            address:{
+                required:true
+            },
+            telephone:{
+                required:true
+            },
+            gender:{
+                required:true
+            },
+            birthday:{
+                required:true
+            }
+        },
+        messages:{
+
+        }
+    });
+});

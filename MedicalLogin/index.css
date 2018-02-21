@@ -1,0 +1,249 @@
+/*公共属性*/
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+a{
+    color: #000;
+    font-size: 16px;
+}
+button{
+    cursor: pointer;
+
+}
+
+/*整体*/
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+/*头部*/
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #F1F1F1;
+    border-bottom: 0.5px solid #ddd;
+}
+.header .container{
+    height: 100%;
+}
+.header .header-left{
+    text-align: left;
+    padding-left: 0px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.header a:hover{
+    color: #0083ce;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.header li{
+    width: 100px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.header .headerUL{
+    line-height: 50px;
+    height: 50px;
+}
+/*中间主体*/
+.main-content{
+    width: 100%;
+    min-height: 300px;
+}
+/*主体中的搜索栏*/
+.searchDiv{
+    margin: 0px auto;/*若缺少，则会出现左右滚动条*/
+    margin-bottom: 6px;
+}
+/*主体中的中心内容*/
+.main-content .container{
+    /*border: 1px solid #1c2dbe;*/
+    min-height: 650px;
+}
+.main-content .categoryListDiv{
+    margin: 0px -15px;
+    background-color: #222222;
+    padding: 3px;
+    border-radius: 5px;
+}
+.categoryListDiv a{
+    color: #999;
+}
+.categoryListDiv a:hover{
+    color: #fff;
+    font-weight: 600;
+}
+/*尾部*/
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #D2D8D8;
+}
+.footer .container{
+    height: 100%;
+}
+.footer .UlDiv{
+    padding-top: 20px;
+    text-align: center;
+}
+.footer ul{
+    padding: 0px 100px 0px 100px;
+}
+.footer li{
+    padding: 3px;
+}
+.footer li a{
+    /*font-size: 15px;*/
+}
+.footer li a:hover{
+    font-weight: 600;
+    text-decoration: none;
+    color: #313131;
+}
+.footer  p{
+    text-align: center;
+}
+.footer p a:hover{
+    color: #11AFBE;
+    font-weight: 500;
+    text-decoration: none;
+}
+.footer a,p,li{
+    color: #7B858E;
+    font-size: 15px;
+}
+
+/**
+ * login
+ */
+/*登录*/
+.loginDiv{
+    width: 100%;
+    height: 500px;
+    background-image: url('bg3.jpg');
+    background-size: 100% 100%;
+}
+.loginRight{
+    float: right;
+    width: 50%;
+    height: 100%;
+    padding: 50px 10px;
+}
+.loginRight .loginFormDiv{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: -2px 2px 2px #999;
+    border-radius: 25px;
+    padding: 80px 0px 10px 0px;
+}
+.loginRight{
+    padding-top: 100px;
+}
+/*未登录，点击跳转到注册界面*/
+.row .loginToRegister a{
+    font-size: 14px;
+    color: #666666;
+}
+.row .loginToRegister a:hover{
+    color: #23527C;
+}
+/*登陆时，validate检查错误*/
+.error{
+    color: #f00;
+    font-size: 15px;
+    vertical-align:
+}
+/**
+ * register
+ */
+.registerDiv{
+    background-color: rgba(230, 230, 230, 0.52);
+    box-shadow: 3px 5px 3px rgba(172, 172, 172, 0.86);
+    border-radius: 10px;
+    border: 1px solid rgba(153, 153, 153, 0.75);
+    width: 100%;
+    min-height: 520px;
+    max-height: 780px;
+    margin: 1px 0px 8px;
+}
+.registerDiv, .registerFormDiv{
+}
+.form-group {
+    margin-bottom: 0.7rem;
+}
+.registerH4{
+    color: rgba(34, 34, 170, 0.64);
+    font-weight: 500;
+    font-size: 30px;
+    font-family: "华文行楷";
+}
+/*已有账号，点击快速登陆*/
+.row .registerToLogin a{
+    font-size: 14px;
+    color: #666666;
+}
+.row .registerToLogin a:hover{
+    color: #23527C;
+}
+/**
+ * 购物车
+ */
+.cartDiv{
+    /*border: 1px solid #000;*/
+}
+.cartDiv .cart_empty{
+    min-height: 300px;
+    padding: 90px 0 0 495px;
+    background: url('images/empty_cart.png') no-repeat 90px 46px;
+}
+.cart_empty p{
+    color: #000;
+}
+.cart_empty h6{
+    padding: 5px 0px;
+    color: #999;
+}
+.cart_empty a{
+    color: #337AB7;
+}
+.cart_empty a:hover{
+    color: #cc3c3c;
+}
+.cartTableDiv h4{
+    padding: 0 0 10px 20px;
+}
+
+.sumDiv strong{
+    color: #E64346;
+    font-size: 18px;
+}
+/**
+ * 我的订单
+ */
+.ordersDiv{
+    padding: 20px;
+}
+h3{
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.orderTableDiv{
+    /*border: 1px solid #0f0;*/
+}
+/*index.html*/
+.medicineListTable{
+    height: 450px;
+    border: 1px solid #000;
+}
+
+
+
+
+
+
+
+
+
+
+/**/

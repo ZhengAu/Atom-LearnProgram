@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="..\..\font-awesome-4.7.0\css\font-awesome.min.css">
+    <script src="..\js\jquery-1.8.3.min.js" type="text/javascript"></script>
+    <title>药品信息</title>
+    <script type="text/javascript">
+        $(function(){
+            // set the color of tr
+            $("tbody>tr:odd").css("backgroundColor","#eee");
+            $("tbody>tr:even").css("backgroundColor","#fff");
+        });
+    </script>
+    <style media="screen">
+        .wrapper{
+            margin-top: 50px;
+            width: 100%;
+            height: 100%;
+        }
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .searchUL{
+            text-align: center;
+            margin: 30px 0;
+        }
+        .MedicineList p{
+            background-color: #AFD1F3;
+            text-align: center;
+            font-weight: 600;
+        }
+        .tableList{
+            padding: 10px 0;
+        }
+        .buttonList{
+            float: right;
+            margin-bottom: 8px;
+        }
+        .buttonList button{
+            font-size: 15px;
+            width: 90px;
+            padding: 3px;
+            margin-left: 10px;
+        }
+        .fa{
+            color: #000;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th,table td{
+            border: 1.5px solid #777;
+        }
+        tr>th{
+            line-height: 25px;
+            background-color: #AFD1F3;
+        }
+        td{
+            text-align: center;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 条件查询 -->
+        <div class="searchUL">
+            <form action="" id="" method="">
+                <ul>
+                    <li>
+                        <label for="mmame">药品名称:&nbsp;</label>
+                        <input type="text" id="mmame" name="mname">
+                    </li>
+                    <li>
+                        <label for="mmode">服用方法:&nbsp;</label>
+                        <select id="mmode" name="mmode">
+                            <option value="0">不限</option>
+                            <option value="0">内服</option>
+                            <option value="1">外用</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="cid">药品类型:&nbsp;</label>
+                        <select id="cid" name="cid" style="width:82px;">
+                            <option value="">不限</option>
+                            <option value="">家庭常备</option>
+                            <option value="">专科用药</option>
+                            <option value="">医疗器械</option>
+                            <option value="">计生用品</option>
+                            <option value="">滋补保健</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="sid">生产厂家:&nbsp;</label>
+                        <select id="sid" name="sid" style="width:82px;">
+                            <option value="">不限</option>
+                            <option value="">江西远东药业有限公司</option>
+                            <option value="">九江医药总公司</option>
+                            <option value="">爱索尔广州包装有限公司</option>
+                            <option value="">北京同仁堂有限责任公司</option>
+                            <option value="">山东加华制药有限公司</option>
+                        </select>
+                    </li>
+                    <li>
+                        <input type="button" name="" value="搜索">
+                    </li>
+                </ul>
+            </form>
+        </div><!-- end of seachUL -->
+        <!-- <br> -->
+        <div class="MedicineList">
+            <p>药品列表</p>
+        </div>
+        <div class="tableList" style="width: 100%;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>药品名称</th>
+                        <th>药品价格</th>
+                        <th>服用方法</th>
+                        <th>功效</th>
+                        <th>生产日期</th>
+                        <th>保质期</th>
+                        <th>浏览打印</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>name1</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicinePrint.html"><i class="fa fa-print"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>name2</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicinePrint.html"><i class="fa fa-print"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>name3</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicinePrint.html"><i class="fa fa-print"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>name4</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicinePrint.html"><i class="fa fa-print"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>name5</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicinePrint.html"><i class="fa fa-print"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

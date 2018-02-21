@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>同时运动——完美运动框架</title>
+    <style media="screen">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            margin-bottom: 50px;
+            border: 2px solid blue;
+            background-color: rgb(61, 224, 40);
+            filter: alpha(opacity:40);
+            opacity: 0.4;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var oDiv1 = document.getElementById('div1');
+            var oDiv2 = document.getElementById('div2');
+            oDiv1.onmouseover = function() {
+                goMove(oDiv1, {width:205,height:200,opacity:100},function(){
+                    goMove(oDiv1,{width:800,height:100,opacity:50})
+                });
+            }
+            oDiv1.onmouseout = function() {
+                goMove(oDiv1, {opacity:40,height:100,width:200});
+            }
+        } // end of window.onload
+
+        var timer = null;
+        function goMove(obj, json, fn) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                var flag = true;//假设为真
+                for (var attr in json) {
+                    var current = 0;
+                    if (attr == 'opacity') {
+                        current = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+                    } else {
+                        current = parseInt(getStyle(obj, attr));
+                    }
+                    // 求向左或向右移动的速度，向右为正，向左为负
+                    var speed = (json[attr] - current) / 10;
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                    if (current != json[attr]) {//json中的属性值都没有达到目标值
+                        flag = false;
+                    }
+                    if (attr == 'opacity') {
+                        obj.style.filter = 'alpha(opacity' + (current + speed) + ')';
+                        obj.style.opacity = (current + speed) / 100;
+                    } else {
+                        obj.style[attr] = current + speed + "px";
+                    }
+                }// end of for...in...
+                if(flag){// json中的全部属性值都达到了目标值
+                    clearInterval(obj.timer);
+                    if(fn){
+                        fn();
+                    }
+                }
+            }, 50);// end of setInterval
+        } // end of goMove()
+
+        function getStyle(obj, attr) {
+            if (obj.currentStyle) {
+                return obj.currentStyle[attr];
+            } else {
+                return getComputedStyle(obj, false)[attr];
+            }
+        } // end of getStyle()
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

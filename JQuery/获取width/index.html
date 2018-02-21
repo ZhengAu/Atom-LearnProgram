@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹窗固定中间</title>
+    <script src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <style media="screen">
+        #login {
+            height: 200px;
+            width: 300px;
+            border: 2px solid blue;
+        }
+
+        .name,
+        .pw {
+            margin: 30px;
+        }
+
+        .sub {
+            margin: 30px 40px;
+        }
+
+        .sub button {
+            margin-left: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('button').click(function() {
+                var oLogin = $(
+                    '<div id="login"><div class="name"><label>用户名：</label><input type="text" placeholder="请输入用户名..."></div><div class="pw"><label>密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" placeholder="请输入密码..."></div><div class="sub"><button type="button" name="button">Submit</button><button id="cancel" type="button" name="button">Cancel</button></div></div>'
+                );
+                $('body').append(oLogin);
+
+                oLogin.css('left', ($(window).width() - oLogin.outerWidth()) / 2);
+                oLogin.css('top', ($(window).height() - oLogin.outerHeight()) / 2);
+
+                // close
+                $('#cancel').click(function() {
+                    oLogin.remove();
+                })
+            })
+        });
+    </script>
+</head>
+
+<body style="height: 2000px;">
+    <button type="button" name="button">弹出</button>
+    <!-- <div id="login">
+        <div class="name">
+            <label>用户名：</label>
+            <input type="text" placeholder="请输入用户名...">
+        </div>
+        <div class="pw">
+            <label>密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+            <input type="password" placeholder="请输入密码...">
+        </div>
+        <div class="sub">
+            <button type="button" name="button">Submit</button>
+            <button id="cancel" type="button" name="button">Cancel</button>
+        </div>
+    </div> -->
+</body>
+
+</html>

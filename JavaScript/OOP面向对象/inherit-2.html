@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Inherit-2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 类Person
+      function Person() {
+        var args=arguments;
+        if(typeof args[0]==='object'&&args[0]){//参数是对象
+          if(args[0].name){
+            this.name=args[0].name;
+          }
+          if(args[0].age){
+            this.age=args[0].age;
+          }
+        }
+        else {//参数是非对象
+          if(args[0]){
+            this.name=args[0];
+          }
+          if(args[1]){
+            this.age=args[1];
+          }
+        }
+      }
+
+      Person.prototype.Legs_num=2;
+      Person.prototype.Arms_num=2;
+      Person.prototype.hi = function () {
+        console.log('My name is '+this.name+'.');
+        console.log("I'm "+this.age+" years old now.");
+      };
+      Person.prototype.getName=function () {
+        return this.name;
+      }
+      Person.prototype.walk=function () {
+        console.log(this.name+" is walking...");
+      }
+
+      // 类Student
+      function Student() {
+        var args=arguments;
+        if((typeof args[0]==='object'&&args[0])||(typeof args[1]==='object'&&args[1])){
+          Person.call(this,args[0].name,args[0].age);
+          this.className=args[0].className;
+        }
+        else {
+          Person.call(this,args[0],args[1]);
+          if(args[2]){
+            this.className=args[2];
+          }
+        }
+      }
+
+      Student.prototype=Object.create(Person.prototype);
+      if(!Object.create){//不是ES5的，用这个判断
+        Object.create = function(proto){
+          function F() {}
+          F.prototype=proto;
+          return new F;
+        };
+      }
+      Student.prototype.constructor=Student;
+
+
+      Student.prototype.hi=function () {
+        console.log('My name is '+this.name+", I'm "+this.age+" years old now, and from "+this.className+".");
+      }
+      Student.prototype.learn=function () {
+        console.log(this.name+" is learning FrontEnd program.");
+      }
+
+      // 实例化
+      var me=new Student({name:"Lilly",age:20,className:"Class 2, Grade 3"});//对象
+      // var me = new Student('Kitty',18,'Class 5, Grade 1');//非对象
+      me.hi();
+      me.walk();
+      me.learn();
+      console.log(me);
+
+    </script>
+  </body>
+</html>

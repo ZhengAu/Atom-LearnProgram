@@ -1,0 +1,45 @@
+body{
+    background-color: #ddd;
+    height: 100%;
+}
+.container{
+    background-color: rgb(254, 254, 254);
+    padding-bottom: 100px;
+    min-height: 600px;
+}
+.header{
+    padding-top: 20px;
+    text-align: center;
+}
+.header h2{
+    background-color: #ccc;
+    padding: 30px;
+}
+.table,th{
+    text-align: center;
+}
+thead{
+    background-color: #E9ECEF;
+}
+.tableDiv{
+    min-height: 200px;
+    max-height: 380px;
+}
+.footer{
+    text-align: center;
+}
+
+
+/*add*/
+.addPersonDiv{
+    min-height: 400px;
+}
+.error{
+    color: #f00;
+}
+
+
+
+
+
+/**/

@@ -1,0 +1,152 @@
+
+/*HTML5新标签兼容低版本的IE*/
+article,aside,footer,header,section,footer,nav,figure,main{
+  display:block;
+}
+
+/*页面样式初始化*/
+*{
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/*通用样式*/
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/*最外层盒子*/
+.wrap{
+    width: 960px;
+    margin: 0px auto;
+}
+/*头部*/
+.top-header{
+  margin-top: 10px;
+  height: 130px;
+}
+
+.top-header img{
+  float: left;
+  margin-left: 30px;
+}
+
+.top-header .top-nav{
+  float: left;
+  margin-top: 90px;
+  margin-left: 30px;
+}
+
+.top-header .top-nav ul li{
+  display: inline;
+  margin:0 6px;
+  padding:5px 10px;
+  background-color: #EFE5D0;
+}
+.top-nav ul li a{
+  color:#006f47;
+}
+.top-nav ul li a:link,
+.top-nav ul li a:visited{
+  font-weight: bold;
+}
+
+/*侧边栏*/
+.left-aside{
+  width: 350px;
+  float: left;
+  font-family: arial;
+}
+.left-aside section{
+  background:#efe5d0 url("../img/background.gif") top left;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.left-aside h3{
+  color: green;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.left-aside .news p{
+  line-height: 1.6em;
+
+}
+.news a{
+  color: #00bb00;
+}
+/*侧边栏中的饮品*/
+.drinks figure{
+  float: left;
+}
+.drinks header{
+  color: green;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.drinks .figure-r{
+  margin-left: 20px;
+}
+.drinks figure img{
+  width: 141px;
+  height: 158px;
+  border: 2px solid #ffffff;
+}
+.drinks figcaption{
+  text-align: center;
+  margin:5px 0 20px;
+}
+.clear{
+  clear: both;
+}
+
+/*主内容区域*/
+.main-body{
+  margin-left: 365px;
+  background: #efe5d0 url(../img/background.gif) top left;
+}
+main article{
+  border-bottom: 1px dashed #c8b99c;
+  padding: 20px;
+}
+main article:last-child{
+  border-bottom: none;
+}
+main article h3{
+  color: #006f47;
+  margin-bottom: 10px;
+}
+main article time{
+    color: #675c47;
+}
+main article p{
+  margin: 10px 0;
+  text-indent: 30px;
+  line-height: 1.6em;
+}
+main article b{
+  color: #675c47;
+  /*font-weight: bolder;*/
+}
+main article small{
+  color: #808080;
+}
+main article footer{
+  text-align: right;
+  color: #675c47;
+  font-size: 12px;
+}
+
+/*页脚*/
+.page-footer{
+  /*clear: both;*/
+  background-color: #675C47;
+  color: #efe5d0;
+  text-align: center;
+  padding: 15px;
+}

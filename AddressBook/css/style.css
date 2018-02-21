@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+
+.container {
+	padding-top: 30px;
+}
+
+.head {
+	background-color: #999;
+	padding: 10px;
+}
+
+.main {
+	width: 100%;
+	margin: 20px 0;
+	padding: 10px 20px;
+	height: 500px;
+}
+/* 编辑、删除icon */
+.fa {
+	color: #000;
+}
+/* 表格内容居中 */
+table, th {
+	text-align: center;
+}
+
+table thead {
+	background-color: #AFD1F3;
+}
+
+.table-responsive{
+	height: 300px;
+}
+
+.foot {
+	background-color: #D2D8D8;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.foot p {
+	margin: 5px 0 5px;
+}
+/* 搜过组 */
+.search-group{
+	padding:5px 12px;
+}
+/* 搜索框 */
+.searchUsername{
+	text-indent: 5px;
+}
+/* 搜索框button*/
+.searchBtn{
+	width: 66px;
+	background-color: #337AB7;
+	border: none;
+	height: 28px;
+	color: #fff;
+}
+.searchBtn:hover{
+	background-color: #236da4;
+}
+/* 分页 */
+.paginate-container {
+
+}
+
+.paginate-box, .info-box {
+	height: 100%;
+}
+
+.info-box {
+	padding: 22px;
+	font-size: 15px;
+}
+
+.paginate-container input {
+	width: 40px;
+	text-align: center;
+	margin: 0px 5px;
+}
+
+.info-box span {
+	margin: 0px 5px;
+	font-weight: 600;
+}

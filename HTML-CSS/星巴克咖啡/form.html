@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>星巴克咖啡在线订购</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <style media="screen">
+    main {
+      border: 1px solid green;
+      background: #efe5d0 url("img/background.gif") top left;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      color: green;
+    }
+
+    .addr {
+      font-weight: bold;
+      font-family: 黑体;
+    }
+
+    .page-footer {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="top-header">
+      <img class="starbucks-logo" src="img/logo.png" alt="logo">
+      <nav class="top-nav top-menu">
+        <ul>
+          <li><a href="home.html" title="星巴克主页">主页</a></li>
+          <li><a href="#" title="咖啡及文化">咖啡及文化</a></li>
+          <li><a href="#" title="饮品及美食">饮品及美食</a></li>
+          <li><a href="#" title="星亨俱乐部">星亨俱乐部</a></li>
+          <li><a href="#" title="在线订购">在线订购</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="">
+      <h3 class="text-center">订购星巴克咖啡豆</h3>
+      <form class="form-horizontal" action="success.html" method="post">
+
+        <div class="form-group">
+          <label for="example1" class="col-sm-4 control-label">*你喜欢的咖啡豆品种：</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="example1" list="list" required>
+            <datalist id="list">
+                <option value="House Blend（首选咖啡）">
+                <option value="Kenya（肯亚咖啡）">
+                <option value="Organic Guatemala（危地马拉有机咖啡）">
+            </datalist>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example2" class="col-sm-4 control-label">*类型：</label>
+          <div class="col-sm-4">
+            <div class="radio">
+              <label for="ra1">
+                <input type="radio" id="ra1" name="radio" value="1" required>咖啡豆
+              </label>
+              <label for="ra2">
+                <input type="radio" id="ra2" name="radio" value="2" required>咖啡粉
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example3" class="col-sm-4 control-label">*数量：</label>
+          <div class="col-sm-2">
+            <input type="number" class="form-control" id="example3" max="10" min="1" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example4" class="col-sm-4 control-label">希望送货日期：</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="example4">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example4" class="col-sm-4 control-label">附加服务：</label>
+          <div class="col-sm-4">
+            <div class="checkbox">
+              <label for="extras1">
+                <input type="checkbox" id="extras1" name="extras" value="1">礼品包装
+              </label>
+              <label for="extras2">
+                <input type="checkbox" id="extras2" name="extras" value="2">商品目录
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-4">
+            <h4 class="text-right addr">邮寄地址</h4>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example5" class="col-sm-4 control-label">*姓名：</label>
+          <div class="col-sm-4">
+            <input class="form-control" id="example5" type="text" placeholder="姓名" value="" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example6" class="col-sm-4 control-label">*详细地址：</label>
+          <div class="col-sm-4">
+            <input class="form-control" id="example6" type="text" placeholder="详细地址" value="" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example7" class="col-sm-4 control-label">*邮编：</label>
+          <div class="col-sm-4">
+            <input class="form-control" id="example7" type="text" placeholder="邮编" value="" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example7" class="col-sm-4 control-label">*联系电话：</label>
+          <div class="col-sm-4">
+            <input class="form-control" id="example7" type="tel" placeholder="手机号码" value="" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="example8" class="col-sm-4 control-label">留言：</label>
+          <div class="col-sm-6">
+            <textarea class="form-control" id="example8" type="text" placeholder="请输入留言" value="" rows="5"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-4">
+            <button type="submit" class="btn btn-lg btn-primary">确定订购</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <footer class="page-footer">
+    Copyright (c) 2017 Starbucks Corporation. All Rights Reserved.
+  </footer>
+
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

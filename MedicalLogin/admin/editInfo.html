@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>编辑资料</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style media="screen">
+        .container {
+            padding-top: 100px;
+        }
+        .row {
+            margin-bottom: 20px;
+        }
+        input {
+            text-indent: 5px;
+        }
+        .btn{
+            margin-top: 10px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="editInfoForm" action="" method="post">
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-1 text-right">
+                    <label for="username">用户名: </label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" name="username" value="user1" disabled>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-1 text-right">
+                    <label for="username">联系方式: </label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="tel" name="username" value="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-1 text-right">
+                    <label for="username">邮箱: </label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="email" name="username" value="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-3 col-sm-1">
+                    <button type="submit" class="btn btn-primary" name="确定">确定</button>
+                </div>
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-primary" name="取消">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

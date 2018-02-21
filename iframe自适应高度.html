@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="JQuery\js\jquery-3.2.1.min.js"></script>
+    <style>
+     body {
+    	SCROLLBAR-ARROW-COLOR: #ffffff;
+    	SCROLLBAR-BASE-COLOR: #dee3f7;
+    }
+    </style>
+    <!-- <script>
+        function changeFrameHeight(){
+            //var ifm= document.getElementById("myiframe");
+            $("#myiframe").height($(document).height());
+            // ifm.height=document.documentElement.clientHeight;
+        }
+        window.onresize=function(){
+             changeFrameHeight();
+        }
+    </script> -->
+    <script>
+        function changeFrameHeight(){
+            $("#myiframe").height($(document).height());//$(document).height();$(document).width();
+            $(document).width($("#myiframe").width());
+        }
+        window.onresize=function(){
+             changeFrameHeight();
+        }
+    </script>
+</head>
+<div style="float:left;">
+    <ol>
+        <li><a href="http://www.chinadaily.com.cn/" target="myiframe">chinaDaily</a></li>
+        <li><a href="https://github.com/" target="myiframe">GitHub</a></li>
+        <li><a href="http://www.w3cschool.cn" target="myiframe">W3cschool</a></li>
+    </ol>
+</div>
+<div style="width:70%;float:right;border:1px solid red;">
+    <iframe src="https://www.baidu.com" id="myiframe" name="myiframe" width="100%" onload="changeFrameHeight()" frameborder="0"></iframe>
+</div>
+</html>

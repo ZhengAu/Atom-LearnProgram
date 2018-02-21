@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Function</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 以下4中方式等价
+      function aa(x,y,z) {
+        'use strict';
+        console.log('zzz');
+        console.log('strict length:'+arguments.length);
+      }
+      aa(1);
+      console.log('name:'+aa.name);
+      console.log('length:'+aa.length);
+      /*var fn = function (){
+        console.log('abc');
+      };
+      fn();
+      */
+
+      /*(function ab() {
+        console.log('123');
+      })();*/
+
+
+      /*!function (a) {
+        console.log(a);
+      }('0000');*/
+
+
+    </script>
+  </body>
+</html>

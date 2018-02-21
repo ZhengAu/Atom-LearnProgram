@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ZQXY--Login Menu</title>
+    <link rel="shortcut icon" href="zy.ico" type="image/x-icon">
+    <!-- title中的小图标 -->
+    <!-- come from zqu.edu.cn -->
+    <link rel="stylesheet" href="http://jwgl.zqu.edu.cn/styles/css/login.css" media="all">
+    <link rel="stylesheet" href="http://jwgl.zqu.edu.cn/styles/css/supersized.css">
+    <!-- come from sefolio -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
+    <!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all" /> -->
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/full-slider.css" media="all" />
+</head>
+<body>
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('img/slide1.jpg');"></div>
+            <div class="carousel-caption overlay"></div>
+        </div>
+    </div>
+    <!-- 登录层 -->
+    <div class="page-container">
+        <div class="main_box">
+            <div class="login_box">
+                <div class="login_logo">
+                    <!--图标-->
+                    <img src="img/zqxyLogo.png" alt="肇庆学院">
+                </div>
+                <div class="login_form">
+                    <!--登陆输入区域-->
+                    <form action id="login_form" method="post">
+                        <div class="form-group">
+                            <!--登录名-->
+                            <label for="j_username" class="t">账 &nbsp;&nbsp; 号：</label>
+                            <input id="account" value name="account" type="text" class="form-control x319 in" autocomplete="off" placeholder="请输入学号">
+                        </div>
+                        <div class="form-group">
+                            <!--密码-->
+                            <label for="j_password" class="t">密 &nbsp;&nbsp; 码：</label>
+                            <input id="password" type="password" name="password" class="password form-control x319 in" value="" placeholder="请输入密码">
+                        </div>
+                        <div class="form-group">
+                            <!--忘记密码-->
+                            <label class="t"></label>
+                            <a href="javascript:;" class="">忘记密码</a>
+                        </div>
+                        <div class="form-group space">
+                            <!--登录，重置按钮-->
+                            <label class="t"></label>
+                            <input type="submit" value="登 &nbsp; 录" class="btn btn-primary btn-lg" id="submit_btn">
+                            <label class="t"></label>
+                            <input type="reset" value="重 &nbsp; 置" class="btn btn-primary btn-lg" id="reset_btn">
+                        </div>
+                    </form>
+                </div> <!-- End of login_form -->
+            </div> <!-- End of login_box -->
+            <div class="bottom"> <!--底部-->
+                Copyright (c) 2017 Copyright Holder All Rights Reserved. <br> Design by Zheng.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

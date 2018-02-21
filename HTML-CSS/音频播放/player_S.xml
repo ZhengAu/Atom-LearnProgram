@@ -1,0 +1,17 @@
+﻿<player>
+    <playlist>
+        <track>
+            <file>ICry.mp3</file>
+            <title>I Cry</title>
+            <artist>有里知花</artist>
+            <album>-</album>
+        </track>
+
+        <track>
+            <file>YouAreMySunshine.mp3</file>
+            <title>You Are My Sunshine</title>
+            <artist>张靓颖</artist>
+            <album>电影《何以笙箫默》英文主题曲</album>
+        </track>
+    </playlist>
+</player>

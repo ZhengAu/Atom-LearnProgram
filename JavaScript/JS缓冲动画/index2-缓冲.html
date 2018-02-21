@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS——缓冲动画</title>
+    <style media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+            left: -200px;
+        }
+
+        #more {
+            width: 20px;
+            background-color: rgb(255, 0, 0);
+            color: #fff;
+            position: absolute;
+            font-size: 18px;
+            padding: 5px 0;
+            left: 200px;
+            top: 70px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var oDiv = document.getElementById('div1');
+            // 显示，既是向右移
+            oDiv.onmouseover = function() {
+                goMove(0);
+            }
+            // 隐藏，既是向左移
+            oDiv.onmouseout = function() {
+                goMove(-200);
+            }
+        }
+
+        var timer = null;
+
+        function goMove(Target) { //Target是div左边的位置
+            clearInterval(timer);
+            var oDiv = document.getElementById('div1');
+            timer = setInterval(function() {
+                //移动速度(0-(-200))和(-200-0)
+                var speed = (Target - oDiv.offsetLeft) / 10;
+                // 速度大于0，向上取整，速度小于0，向下取整
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                if (oDiv.offsetLeft == Target) {
+                    clearInterval(timer);
+                } else {
+                    oDiv.style.left = oDiv.offsetLeft + speed + "px";
+                }
+            }, 50)
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h3>了解更多</h3>
+        <p>This is a paragraph. It is about the movement of javascript.</p>
+        <span id="more">更多</span>
+    </div>
+</body>
+
+</html>

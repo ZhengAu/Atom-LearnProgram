@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="..\..\font-awesome-4.7.0\css\font-awesome.min.css">
+    <script src="..\js\jquery-1.8.3.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="..\css\bootstrap.min.css">
+    <title>药品管理</title>
+    <script type="text/javascript">
+        $(function(){
+            // set the color of tr
+            $("tbody>tr:odd").css("backgroundColor","#eee");
+            $("tbody>tr:even").css("backgroundColor","#fff");
+            /* add medicine */
+            $('#addMedicine').click(function(){
+                //window.location.href="medicineAdd.html";
+            });
+        });
+    </script>
+    <style media="screen">
+        .wrapper{
+            margin-top: 50px;
+            width: 100%;
+            height: 100%;
+        }
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .searchUL{
+            text-align: center;
+            margin: 30px 0;
+        }
+        .MedicineList p{
+            background-color: #AFD1F3;
+            text-align: center;
+            font-weight: 600;
+        }
+        .tableList{
+            padding: 10px 0;
+        }
+        .buttonList{
+            float: right;
+            margin-bottom: 8px;
+        }
+        .buttonList button{
+            font-size: 15px;
+            width: 90px;
+            padding: 3px;
+            margin-left: 10px;
+        }
+        .fa{
+            color: #000;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td,table th{
+            border: 1.5px solid #777;
+        }
+        tr>th{
+            line-height: 25px;
+            background-color: #AFD1F3;
+        }
+        td{
+            text-align: center;
+            line-height: 25px;
+        }
+        tr>td:first-child{
+            padding-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 条件查询 -->
+        <div class="searchUL">
+            <form action="" id="" method="">
+                <ul>
+                    <li>
+                        <label for="mmame">药品名称:&nbsp;</label>
+                        <input type="text" id="mmame" name="mname">
+                    </li>
+                    <li>
+                        <label for="mmode">服用方法:&nbsp;</label>
+                        <select id="mmode" name="mmode">
+                            <option value="0">不限</option>
+                            <option value="0">内服</option>
+                            <option value="1">外用</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="cid">药品类型:&nbsp;</label>
+                        <select id="cid" name="cid" style="width:82px;">
+                            <option value="">不限</option>
+                            <option value="">家庭常备</option>
+                            <option value="">专科用药</option>
+                            <option value="">医疗器械</option>
+                            <option value="">计生用品</option>
+                            <option value="">滋补保健</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="sid">生产厂家:&nbsp;</label>
+                        <select id="sid" name="sid" style="width:82px;">
+                            <option value="">不限</option>
+                            <option value="">江西远东药业有限公司</option>
+                            <option value="">九江医药总公司</option>
+                            <option value="">爱索尔广州包装有限公司</option>
+                            <option value="">北京同仁堂有限责任公司</option>
+                            <option value="">山东加华制药有限公司</option>
+                        </select>
+                    </li>
+                    <li>
+                        <input type="button" name="" value="搜索">
+                    </li>
+                </ul>
+            </form>
+        </div><!-- end of seachUL -->
+        <!-- <br> -->
+        <div class="MedicineList">
+            <p>药品列表</p>
+        </div>
+        <div class="buttonList">
+            <button type="button" name="导入" style="width:120px;">导入Excel表</button>
+            <button type="button" name="删除">批量删除</button>
+            <button type="button" id="addMedicine" name="添加">添加</button>
+        </div>
+        <div class="tableList" style="width: 100%;">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="6%;">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll">全选</label>
+                        </th>
+                        <th width="5%">序号</th>
+                        <th width="15%">药品名称</th>
+                        <th width="8%">药品价格</th>
+                        <th width="8%">服用方法</th>
+                        <th width="24%">功效</th>
+                        <th width="10%">生产日期</th>
+                        <th width="8%">保质期</th>
+                        <th width="8%">编辑</th>
+                        <th width="8%">删除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td ><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>name1</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicineEdit.html"><i class="fa fa-edit"></i></a></td>
+                        <td><a href="javascript:;"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>2</td>
+                        <td>name2</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicineEdit.html"><i class="fa fa-edit"></i></a></td>
+                        <td><a href="javascript:;"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>3</td>
+                        <td>name3</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="medicineEdit.html"><i class="fa fa-edit"></i></a></td>
+                        <td><a href="javascript:;"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>4</td>
+                        <td>name4</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="javascript:;"><i class="fa fa-edit"></i></a></td>
+                        <td><a href="javascript:;"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>5</td>
+                        <td>name5</td>
+                        <td>123</td>
+                        <td>内服</td>
+                        <td>肠胃炎</td>
+                        <td>2017-01-01</td>
+                        <td>60</td>
+                        <td><a href="javascript:;"><i class="fa fa-edit"></i></a></td>
+                        <td><a href="javascript:;"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="popUplayer">
+        <div class="layer">
+                <div class="addCategoryTop">
+                    <span>添加药品分类</span>
+                    <button type="button" name="button" id="cancel" style="float:right;">关闭</button>
+                </div>
+                <br>
+                <br><br>
+                <div class="editForm">
+                    <form action="" method="post" id="addCategoryForm">
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-3 text-right" style="padding-top:3px;">
+                                <i class="redStar">*</i> 分类名称:
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="cgname" id="cgname" value="">
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div class="row">
+                            <div class="col-sm-offset-4 col-sm-2">
+                                <button type="submit" class="btn_submit btn btn-primary" name="确定">确定</button>
+                            </div>
+                                <div class="col-sm-2">
+                                <button type="reset" class="btn_reset  btn btn-primary" name="重置">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div><!-- end of .editForm -->
+        </div><!-- end of .layer -->
+    </div><!-- end of .popUplayer -->
+    <style>
+        .popUplayer{
+            background-color:rgba(179, 179, 179, 0.73);
+            /*opacity: 0.8;
+            filter: alpha(opacity:80);*/
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 0;
+        }
+        .layer{
+            padding: 20px;
+            position: relative;
+            margin:50px auto;
+            width: 30%;
+            height: 40%;
+            background-color: #fff;
+            opacity: 1;
+        }
+        .addCategoryTop span{
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .addCategoryTop button{
+            width: 60px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#addMedicine").click(function () {
+                $(".popUplayer").show();
+            });
+            $("#cancel").click(function(){
+                $(".popUplayer").hide();
+            });
+        })
+    </script>
+</body>
+</html>

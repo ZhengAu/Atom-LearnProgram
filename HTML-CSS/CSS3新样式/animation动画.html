@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>animation动画——关键帧</title>
+    <style media="screen">
+      .div1{
+        width: 50px;
+        height: 100px;
+        background-color: green;
+        border-radius: 50%;
+      }
+      @keyframes mybox {
+        /*@  1  */
+        /*from{width: 50px;height: 100px;}
+        to{width: 500px;height: 100px;}*/
+
+        /*@  2  */
+        /*0%{width: 50px;height: 100px;}
+        50%{width: 300px;height: 100px;}
+        100%{width: 200px;height: 300px;}*/
+
+        /*@  3  */
+        /*0%{transform: translate(0,0);}
+        25%{transform: translate(0,200px);}
+        50%{transform: translate(200px,0);}
+        75%{transform: translate(200px,200px);}
+        100%{transform: translate(0,0);}*/
+
+        /*@  4  */
+        100%{transform: rotate(360deg);}
+      }
+      @-webkit-keyframes mybox{
+        /*@   1  */
+        /*from{width: 50px;height: 100px;}
+        to{width: 200px;height: 100px;}*/
+
+        /*@  2  */
+        /*0%{width: 50px;height: 100px;}
+        50%{width: 200px;height: 100px;}
+        100%{width: 200px;height: 200px;}*/
+
+        /*@  3  */
+        /*0%{transform: translate(0,0);}
+        25%{transform: translate(0,200px);}
+        50%{transform: translate(200px,0);}
+        75%{transform: translate(200px,200px);}
+        100%{transform: translate(0,0);}*/
+
+        /*@  4  */
+        100%{transform: rotate(360deg);}
+      }
+      /*.div1{
+        animation-name: mybox;
+        animation-duration: 2s;
+        animation-play-state: running;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-name:mybox;
+        -webkit-animation-duration:2s;
+        -webkit-animation-play-state:running;
+        -webkit-animation-iteration-count:infinite;    /*次数*/
+        /*-webkit-animation-timing-function:ease-in-out;*/
+        /*-webkit-animation-delay:1s;*/
+        /*-webkit-animatin-fill-mode:both;*/
+        /*-webkit-animation-direction:alternate; 先正向，后反向
+      }*/
+      /*总结为一个animation上*/
+      .div1{
+        animation: mybox 2s ease-in-out 0.2s alternate infinite running;
+        -webkit-animation: mybox 2s ease-in-out 0.2s alternate infinite running;
+      }
+      div:hover{
+        animation-play-state: paused;
+        -webkit-animatin-play-state:paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1"></div>
+  </body>
+</html>

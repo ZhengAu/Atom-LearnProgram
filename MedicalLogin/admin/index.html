@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>医药管理信息系统</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style media="screen">
+        {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<frameset rows="100px,*,20" frameborder="1" border="4" framespacing="0" bordercolor="#000">
+    <frame src="head.html" name="topFrame" scrolling="no" noresize></frame><!-- 头部 -->
+    <frameset cols="220px,*" frameborder="0" border="0" framespacing="0">
+        <frame src="sidebar.html" name="leftFrame" scrolling="yes" noresize></frame><!-- 导航栏 -->
+        <frame src="welcome.html" name="mainFrame"></frame><!-- 主页面 （包含footer） -->
+    </frameset>
+    <frame src="foot.html" name="bottomFrame" frameborder="0" scrolling="no" noresize></frame>
+</frameset>
+</html>

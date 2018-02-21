@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // 字面量
+    // var person={};//空对象
+    var person={
+      name:"zpj",
+      age:22,
+      address:"广东",
+      gender:"man"
+    };
+    console.log(typeof person);
+    console.log(person);
+    console.log(person.hasOwnProperty("name"));//true
+    console.log("address" in person);//true
+    console.log(person.propertyIsEnumerable("toString"));
+    // new Object()
+    var person2=new Object();
+    person2.name="zzzzz";
+    person2.age=33;
+    person2.id="201524121212";
+    console.log(person2);
+    // 构造函数
+    function Person(name, age, id){
+      this.name=name;
+      this.age=age;
+      this.id=id;
+    }
+    var person3 = new Person("aaa",123,"123123123");
+    var person4 = new Person;
+    console.log(typeof person3.toString);//function
+    console.log(person4);
+    //Object.create()
+    var obj=Object.create({x:1,y:2});
+    console.log("Object.create():    x="+obj.x+"   "+"y="+obj.y);
+    console.log(obj.hasOwnProperty("x"));
+  </script>
+</body>
+</html>

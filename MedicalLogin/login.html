@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员登录</title>
+    <!-- bootstrap4 -->
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="index.css">
+    <!-- inco -->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-sm-6 header-left">
+                        您好，欢迎来到医药商场
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item"><a class="" href="javascript:;">登录</a></li>
+                            <li class="nav-item"><a class="" href="register.html">注册</a></li>
+                            <li class="nav-item"><a class="" href="cart.html">购物车</a></li>
+                            <li class="nav-item"><a class="" href="orders.html">我的订单</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of .header -->
+        <br><br>
+        <div class="main-content">
+            <div class="row searchDiv">
+                <div class="offset-lg-2 col-lg-3 text-center" style="">
+                    <h5 style="color:#666;line-height:38px;">关注健康，购买正品，请到医药商场。</h5>
+                </div>
+                <div class="offset-1 col-lg-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入药品名..." aria-label="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-outline-primary" type="button" style="width:80px;">搜索</button>
+                        </span>
+                    </div>
+                </div>
+            </div><!-- end of .searchDiv -->
+            <div class="container">
+                <div class="categoryListDiv">
+                    <nav class="nav nav-pills nav-justified">
+                        <a class="nav-item nav-link" href="index.html">首页</a>
+                        <a class="nav-item nav-link" href="javascript:;">家庭常备</a>
+                        <a class="nav-item nav-link" href="javascript:;">专科用药</a>
+                        <a class="nav-item nav-link" href="javascript:;">医疗器械</a>
+                        <a class="nav-item nav-link" href="javascript:;">隐形眼镜</a>
+                        <a class="nav-item nav-link" href="javascript:;">滋补保健</a>
+                        <a class="nav-item nav-link" href="javascript:;">维生素钙</a>
+                        <a class="nav-item nav-link" href="javascript:;">药妆个护</a>
+                        <a class="nav-item nav-link" href="javascript:;">计生用品</a>
+                        <a class="nav-item nav-link" href="javascript:;">母婴用品</a>
+                    </nav>
+                </div><!-- end of .categoryDiv -->
+                <br>
+                <div class="loginDiv">
+                    <div class="loginRight">
+                        <div class="loginFormDiv">
+                            <form id="loginForm" class="loginForm form-horizontal" method="post" action="javascript:;">
+                            <div class="form-group row">
+                               <label for="username" class="offset-sm-1 col-sm-2 col-form-label">Username</label>
+                               <div class="col-sm-6">
+                                 <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                               </div>
+                               <div class="col-sm-3">
+                                   <label for="username" id="username-error" class="error col-form-label"></label>
+                               </div>
+                             </div>
+                             <div class="form-group row">
+                               <label for="password" class="offset-sm-1 col-sm-2 col-form-label">Password</label>
+                               <div class="col-sm-6">
+                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                               </div>
+                               <div class="col-sm-3"><label for="password" id="password-error" class="error col-form-label"></label></div>
+                             </div>
+                            <br>
+                            <div class="form-group row">
+                                <div class="offset-3 col-sm-6">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" name="">登陆</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-1 loginToRegister">
+                                    <a href="register.html">还没有账号？ 点我注册</a>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div><!-- end of .container -->
+        </div><!-- end of .main-content -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="UlDiv">
+                    <ul>
+                        <li><a href="javascript:;">关于我们</a></li>
+                        <li><a href="javascript:;">联系我们</a></li>
+                        <li><a href="javascript:;">正品保障</a></li>
+                        <li><a href="javascript:;">品牌售后</a></li>
+                        <li><a href="javascript:;">法律声明</a></li>
+                        <li><a href="javascript:;">友情链接</a></li>
+                        <li><a href="javascript:;">服务声明</a></li>
+                        <li><a href="javascript:;">广告声明</a></li>
+                    </ul>
+                    <p>
+                        Copyright (c) 2017 Copyright Holder All Rights Reserved. &nbsp;&nbsp;Design by
+                        <a href="https://github.com/ZhengAu" target="_blank">&nbsp;ZhengAu</a>
+                    </p>
+                </div><!-- end of .UlDiv -->
+            </div>
+        </div>
+        <!-- end of .footer -->
+    </div>
+    <!-- end of .wrapper -->
+
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/messages_zh.js"></script>
+<script type="text/javascript" src="login_register_validate.js"></script>
+</html>

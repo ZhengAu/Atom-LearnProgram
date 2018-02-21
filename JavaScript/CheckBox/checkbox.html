@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复选框----全选</title>
+    <style type="text/css">
+        ul li {
+            list-style-type: none;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function checkAll(name) {
+            var el = document.getElementsByTagName('input');
+            var len = el.length;
+            for (var i = 0; i < len; i++) {
+                if ((el[i].type == "checkbox") && (el[i].name == name)) {
+                    el[i].checked = true;
+                }
+            }
+        }
+
+        function clearAll(name) {
+            var el = document.getElementsByTagName('input');
+            var len = el.length;
+            for (var i = 0; i < len; i++) {
+                if ((el[i].type == "checkbox") && (el[i].name == name)) {
+                    el[i].checked = false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form class="" action="#" method="post">
+        <ul>
+            <li><input type="checkbox" name="checkItem">one</li>
+            <li><input type="checkbox" name="checkItem">two</li>
+            <li><input type="checkbox" name="checkItem">three</li>
+            <li><input type="checkbox" name="checkItem">four</li>
+        </ul>
+    </form>
+    <input type="checkbox" name="test" value=""
+    onclick="if(this.checked==true) { checkAll('test'); } else { clearAll('test'); }" /> 字母全选开关js
+    <input type="checkbox" name="test" value="a" /> a
+    <input type="checkbox" name="test" value="b" /> b
+    <input type="checkbox" name="test" value="c" /> c
+    <input type="checkbox" name="test" value="d" /> d
+    <input type="checkbox" name="test" value="e" /> e
+    <input type="checkbox" name="test" value="f" /> f
+    <input type="checkbox" name="test" value="g" /> g
+    <br />
+    <input type="checkbox" name="num" value="" onclick="if(this.checked==true) { checkAll('num'); } else { clearAll('num'); }" /> 数字全选开关 <input type="checkbox" name="num" value="1" /> 1
+    <input type="checkbox" name="num" value="2" /> 2
+    <input type="checkbox" name="num" value="3" /> 3
+    <br />
+    <br />
+    <input type="button" value="选择所有的字母" onclick="checkAll('test')" /> <input type="button" value="清空选中的字母" onclick="clearAll('test')" /> <br />
+    <br />
+    <input type="button" value="选择所有的数字" onclick="checkAll('num')" /> <input type="button" value="清空选中的数字" onclick="clearAll('num')" />
+</body>
+
+</html>

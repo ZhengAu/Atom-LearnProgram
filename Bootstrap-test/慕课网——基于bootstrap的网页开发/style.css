@@ -1,0 +1,45 @@
+body {
+  padding-top: 50px;
+}
+/*侧栏*/
+.sidebar {
+  background-color: #DDDDDD;
+  position: fixed;
+  left: 0px;
+  top: 50px;
+  bottom: 0px;
+  padding: 20px 0 0 0;
+}
+
+.nav-sidebar>.active>a,
+.nav-sidebar>.active>a:hover,
+.nav-sidebar>.active>a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.btn_group {
+  margin-bottom: 10px;
+}
+
+.myprogress {
+  margin-top: 20px;
+}
+
+.myprogress span {
+  font-size: 12px;
+}
+
+.myprogress>.progress {
+  margin-top: 10px;
+}
+
+/*响应式设计*/
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+  }
+  .sidebar .nav-divider {
+    margin: 0;
+  }
+}

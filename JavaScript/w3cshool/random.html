@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            function randomRange(myMin, myMax) {
+                return Math.floor(Math.random()*(myMax-myMin+1))+myMin; // Change this line
+            }
+
+            var oBtn=document.getElementById('btn');
+            var oInput=document.getElementById('in');
+            oBtn.onclick=function(){
+                oInput.value = randomRange(15,50);
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+<h2>输出 15 和 50 之间的随机数</h2>
+<input type="text" name="" value="" id="in">
+<button type="button" id="btn">确定</button>
+</body>
+</html>
