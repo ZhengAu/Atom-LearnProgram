@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personal Webpage</title>
+  <link rel="stylesheet" href="css/home2.css">
+</head>
+<body>
+  <div class="header">
+    <div class="wrap">
+      <div class="floatLeft"><a href="#"><img src="css/qlip.png" alt=""></a></div>
+      <div id="menu" class="floatRight">
+        <ul>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#content">PortFolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!-- end of .floatRight -->
+    </div><!-- end of .wrap -->
+  </div><!-- end of .header -->
+
+  <div class="main">
+    <div id="about" class="main-about item">
+      <div class="about-para floatLeft">
+        <p>Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.</p>
+        <hr>
+        <h4>Web Developer - User Experience Designer - Graphic Artist</h4>
+      </div>
+      <div class="about-img floatRight"></div>
+    </div><!-- end of .main-about -->
+
+    <div id="content" class="main-content item">
+      <h3>PORTFOLIO</h3>
+      <hr>
+      <div class="content-imgs">
+        <ul>
+          <li><img src="img/1.jpg" alt="1"></li>
+          <li><img src="img/2.jpg" alt="2"></li>
+          <li><img src="img/3.jpg" alt="3"></li>
+          <li><img src="img/4.jpg" alt="4"></li>
+          <li><img src="img/5.jpg" alt="5"></li>
+          <li><img src="img/6.jpg" alt="6"></li>
+        </ul>
+      </div>
+    </div><!-- end of .main-centent -->
+
+    <div id="contact" class="main-contact item">
+      <h3>CONTACT ME</h3>
+      <hr>
+      <div class="contact-info floatLeft">
+        <form class="" action="" method="post">
+          <div class="inputs">
+            <label id="label-animate" for="name">Name</label>
+            <input id="name" type="text" name="name" value=""> <!--placeholder="Name"-->
+          </div>
+
+          <div class="inputs">
+            <label id="label-animate" for="email">Email Address</label>
+            <input id="email" type="email" name="email" value=""><!-- placeholder="Email Address"-->
+          </div>
+          <div class="inputs">
+            <label id="label-animate" for="phone">Phone Number</label>
+            <input id="phone" type="phone" name="phone" value=""><!--placeholder="Phone Number"-->
+          </div>
+          <div class="inputs">
+            <label id="label-animate" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" cols="60"></textarea> <!-- placeholder="Message" -->
+          </div>
+          <button type="submit" name="button">Send</button>
+        </form>
+      </div><!-- end of .contact-info -->
+      <div class="contact-para floatRight">
+        <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.</p>
+        <p>I promise to reply A.S.A.P.</p>
+        <p>Note: No spam/soliciting pour moi, merci :)</p>
+      </div><!-- end of .contact-para -->
+    </div><!-- end of .main-contact -->
+  </div><!-- end of .main -->
+
+  <div class="footer">
+    <div class="foot-about">
+      <div class="foot-left floatLeft">
+        <h3>About This Page</h3>
+        <p>Made with <img src="img/coffee.png" alt="coffee"> and <img src="img/music.png" alt="music"><br/>
+        by <a href="#">ZhengAu</a> (Learner).</p>
+        <p>The original author : <a href="http://qlip.in/" target="_blank">Justin Sane</a>.</p>
+      </div>
+      <div class="foot-right floatRight">
+        <h3>About The Web</h3>
+        <ul>
+          <li>
+            <a href=""><img src="favicon/linkin.ico" alt="linkin"></a>
+          </li>
+          <li>
+            <a href=""><img src="favicon/github.ico" alt="github"></a>
+          </li>
+          <li>
+            <a href=""><img src="favicon/twitter.ico" alt="twitter"></a>
+          </li>
+          <li>
+            <a href=""><img src="favicon/flickr.ico" alt="flickr"></a>
+          </li>
+        </ul>
+      </div>
+    </div><!-- end of .foot-about -->
+    <div class="foot-legal">
+      qlip (c) 2017 Copyright Holder All Rights Reserved.
+    </div><!-- end of .foot-legal -->
+  </div><!-- end of .footer -->
+
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      // 导航栏的定位效果
+      $(window).scroll(function(){
+        var items = $(".main").find(".item");
+        var menu = $("#menu");
+        var top = $(document).scrollTop();
+        var currentId = "";
+        items.each(function(){
+          var current = $(this);
+          if(top>current.offset().top-200){
+            currentId="#"+current.attr("id");
+          }else{
+            return false;
+          }
+        });
+        var currentLink = menu.find(".active");
+        if(currentId&&currentLink.attr("href")!=currentId){
+          currentLink.removeClass("active");
+          menu.find("[href="+currentId+"]").addClass("active");
+        }
+      });
+      // form中的label的弹出效果
+
+
+    });
+  </script>
+</body>
+</html>

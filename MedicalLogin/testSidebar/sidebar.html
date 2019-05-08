@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>sidebar</title>
+	<link rel="stylesheet" href="bootstrap-4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="mynav.css">
+</head>
+<body>
+	<div class="mynav">
+		<div class="mynav-top"></div>
+		<ul>
+			<li class="mynav-item">
+				<a class="icon_left" href="javascript:;">
+					<span>药品管理</span><i class="my-icon mynav-more"></i>
+				</a>
+				<ul>
+					<li><a href="javascript:;" class=""><span>药品管理</span></a></li>
+				</ul>
+			</li>
+			<li class="mynav-item">
+				<a class="icon_left" href="javascript:;">
+					<span>顾客管理</span><i class="my-icon mynav-more"></i>
+				</a>
+				<ul>
+					<li><a href="javascript:;"><span>顾客管理</span></a></li>
+				</ul>
+			</li>
+			<li class="mynav-item">
+				<a class="icon_left" href="javascript:;">
+					<span>经办人管理</span><i class="my-icon mynav-more"></i>
+				</a>
+				<ul>
+					<li><a href="javascript:;"><span>经办人管理</span></a></li>
+				</ul>
+			</li>
+			<li class="mynav-item">
+				<a class="icon_left" href="javascript:;">
+					<span>订单管理</span><i class="my-icon mynav-more"></i>
+				</a>
+				<ul>
+					<li><a href="javascript:;"><span>订单管理</span></a></li>
+				</ul>
+			</li>
+			<li class="mynav-item">
+				<a class="icon_left" href="javascript:;">
+					<span>数据报表</span><i class="my-icon mynav-more"></i>
+				</a>
+				<ul>
+					<li><a href="javascript:;"><span>药品信息</span></a></li>
+					<li><a href="javascript:;"><span>顾客信息</span></a></li>
+					<li><a href="javascript:;"><span>经办人信息</span></a></li>
+					<li><a href="javascript:;"><span>订单信息</span></a></li>
+				</ul>
+			</li>
+			<li class="mynav-item">
+				<a class="icon_left" href="javascript:;">
+					<span>系统管理</span><i class="my-icon mynav-more"></i>
+				</a>
+				<ul>
+					<li><a href="javascript:;"><span>信息编辑</span></a></li>
+					<li><a href="javascript:;"><span>密码修改</span></a></li>
+					<li><a href="javascript:;"><span>数据库备份</span></a></li>
+					<li><a href="javascript:;"><span>数据库还原</span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// mynav收缩展开
+			$('.mynav-item>a').on('click',function(){
+				if ($(this).next().css('display') == "none") {
+					//展开未展开
+					$('.mynav-item').children('ul').slideUp(300);
+					$(this).next('ul').slideDown(300);
+					$(this).parent('li').addClass('mynav-show').siblings('li').removeClass('mynav-show');
+				}else{
+					//收缩已展开
+					$(this).next('ul').slideUp(300);
+					$('.mynav-item.mynav-show').removeClass('mynav-show');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
